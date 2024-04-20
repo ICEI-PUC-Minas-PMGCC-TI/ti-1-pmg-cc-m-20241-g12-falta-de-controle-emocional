@@ -19,13 +19,7 @@ O template para o site é estruturado e permite que a equipe evolua a documenta�
 Esta seção traz explicações breves sobre o conjunto de artefatos que precisam ser incluídos na documentação do projeto com uma conjunto de links importantes para que se entenda como criar cada coisa. 
 
 ## Problema
-A nossa aplicação busca amenizar a ansiedade, a tristeza e a raiva, ajudando o usuário a entender e controlar melhor essas emoções. Qualquer pessoa que tenha algum desses problemas pode usar o nosso site, mas o foco maior é em pessoas entre 15 e 25 anos.
-
-**Links Úteis**:
-
-- [Objetivos, Problema de pesquisa e Justificativa](https://medium.com/@versioparole/objetivos-problema-de-pesquisa-e-justificativa-c98c8233b9c3)
-- [Matriz Certezas, Suposições e Dúvidas](https://medium.com/educa%C3%A7%C3%A3o-fora-da-caixa/matriz-certezas-suposi%C3%A7%C3%B5es-e-d%C3%BAvidas-fa2263633655)
-- [Brainstorming](https://www.euax.com.br/2018/09/brainstorming/)
+A nossa aplicação busca amenizar os problemas da ansiedade, da tristeza e da raiva, ajudando o usuário a entender e controlar melhor essas emoções. Qualquer pessoa que tenha algum desses problemas pode usar o nosso site, mas o foco maior é em pessoas entre 15 e 25 anos.
 
 ## Objetivos
 
