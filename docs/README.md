@@ -39,9 +39,7 @@ Atualmente muitas pessoas se sentem ansiosas, principalmente no Brasil, onde o �
 ## Público-Alvo
 Qualquer pessoa que tenha algum desses problemas pode usar o nosso site, mas o foco maior é em pessoas entre 15 e 30 anos. Pessoas mais pobres podem usar o site também, visto que o foco maior dele é para celular, assim não necessitando de se ter um computador. O site é bem fácil de se entender e, por isso, não é preciso ter um conhecimento sobre tecnologia para se usar, apenas o básico, como clicar em vídeos, em artigos, selecionar opções, etc.
 
-Descreva quem serão as pessoas que usarão a sua aplicação indicando os diferentes perfis. O objetivo aqui não é definir quem serão os clientes ou quais serão os papéis dos usuários na aplicação. A ideia é, dentro do possível, conhecer um pouco mais sobre o perfil dos usuários: conhecimentos prévios, relação com a tecnologia, relações hierárquicas, etc.
-
-Adicione informações sobre o público-alvo por meio de uma descrição textual, ou diagramas de personas, mapa de stakeholders, ou como o grupo achar mais conveniente.
+Adicione informações sobre o público-alvo por meio de uma descrição textual, ou diagramas de personas, mapa de stakeholders, ou como o grupo achar mais conveniente. *
 
 **Links Úteis**:
 
@@ -60,6 +58,7 @@ Relacione as personas identificadas no seu projeto e os respectivos mapas de emp
 - [Criar personas (Hotmart)](https://blog.hotmart.com/pt-br/como-criar-persona-negocio/)
 
 ## Histórias de Usuários
+Sandra - Ela se sentiu ansiosa, triste, com raiva e decepcionada quando a casa de sua mãe iria ser dividida entre os irmãos e todos queriam dá-la para um irmão só, como se a Sandra não valesse nada.
 
 Apresente aqui as histórias de usuário que são relevantes para o projeto de sua solução. As Histórias de Usuário consistem em uma ferramenta poderosa para a compreensão e elicitação dos requisitos funcionais e não funcionais da sua aplicação. Se possível, agrupe as histórias de usuário por contexto, para facilitar consultas recorrentes à essa parte do documento.
 
@@ -69,13 +68,9 @@ Apresente aqui as histórias de usuário que são relevantes para o projeto de s
 - [Como escrever boas histórias de usuário (User Stories)](https://medium.com/vertice/como-escrever-boas-users-stories-hist%C3%B3rias-de-usu%C3%A1rios-b29c75043fac)
 
 ## Requisitos
-
-Os requisitos de um projeto são classificados em dois grupos:
-
-- [Requisitos Funcionais (RF)](https://pt.wikipedia.org/wiki/Requisito_funcional):
-  correspondem a uma funcionalidade que deve estar presente na plataforma (ex: cadastro de usuário).
+Cadastro de usuário, vídeos relaxantes, seção de desabafos e dicas de meditação. *
 - [Requisitos Não Funcionais (RNF)](https://pt.wikipedia.org/wiki/Requisito_n%C3%A3o_funcional):
-  correspondem a uma característica técnica, seja de usabilidade, desempenho, confiabilidade, segurança ou outro (ex: suporte a dispositivos iOS e Android).
+  correspondem a uma característica técnica, seja de usabilidade, desempenho, confiabilidade, segurança ou outro
 
 Lembre-se que cada requisito deve corresponder à uma e somente uma característica alvo da sua solução. Além disso, certifique-se de que todos os aspectos capturados nas Histórias de Usuário foram cobertos.
 
