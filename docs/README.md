@@ -19,27 +19,25 @@ O template para o site é estruturado e permite que a equipe evolua a documenta�
 Esta seção traz explicações breves sobre o conjunto de artefatos que precisam ser incluídos na documentação do projeto com uma conjunto de links importantes para que se entenda como criar cada coisa. 
 
 ## Problema
-A nossa aplicação busca amenizar os problemas da ansiedade, da tristeza e da raiva, ajudando o usuário a entender e controlar melhor essas emoções. Qualquer pessoa que tenha algum desses problemas pode usar o nosso site, mas o foco maior é em pessoas entre 15 e 25 anos.
+Nossa aplicação busca melhorar os problemas da ansiedade, da tristeza e da raiva. 
 
 ## Objetivos
 
-Aqui você deve descrever os objetivos do trabalho indicando que o objetivo geral é desenvolver um software para solucionar o problema apresentado acima. Apresente também alguns (pelo menos 2) objetivos específicos dependendo de onde você vai querer concentrar a sua prática investigativa, ou como você vai aprofundar no seu trabalho.
+O objetivo ao desenvolver o software é amenizar os problemas da ansiedade, da tristeza e da raiva, principalmente ajudando o usuário a entender e a controlar melhor essas emoções.
 
 **Links Úteis**:
 
 - [Objetivo geral e objetivo específico: como fazer e quais verbos utilizar](https://blog.mettzer.com/diferenca-entre-objetivo-geral-e-objetivo-especifico/)
 
 ## Justificativa
-
-Descreva a importância ou a motivação para trabalhar com esta aplicação que você escolheu. Indique as razões pelas quais você escolheu seus objetivos específicos ou as razões para aprofundar em certos aspectos do software.
-
-O grupo de trabalho pode fazer uso de questionários, entrevistas e dados estatísticos, que podem ser apresentados, com o objetivo de esclarecer detalhes do problema que será abordado pelo grupo.
+Atualmente muitas pessoas se sentem ansiosas, principalmente no Brasil, onde o índice de ansiedade é altíssimo. Isso se deve à pandemia, como nos outros países, mas também devido às várias mudanças na economia, o alto índice de desemprego, a falta de segurança pública, dentre outros. Também por causa desses fatores, o Brasil é um dos países com maior índice de depressão e, por isso, amenizar a ansiedade e a depressão é tão importante. As formas do nosso site de tentar amenizá-los também funciona para a raiva, por isso a incluímos em nossos objetivos.
 
 **Links Úteis**:
 
 - [Como montar a justificativa](https://guiadamonografia.com.br/como-montar-justificativa-do-tcc/)
 
 ## Público-Alvo
+Qualquer pessoa que tenha algum desses problemas pode usar o nosso site, mas o foco maior é em pessoas entre 15 e 30 anos. Pessoas mais pobres podem usar o site também, visto que o foco maior dele é para celular, assim não necessitando de se ter um computador. O site é bem fácil de se entender e, por isso, não é preciso ter um conhecimento sobre tecnologia para se usar, apenas o básico, como clicar em vídeos, em artigos, selecionar opções, etc.
 
 Descreva quem serão as pessoas que usarão a sua aplicação indicando os diferentes perfis. O objetivo aqui não é definir quem serão os clientes ou quais serão os papéis dos usuários na aplicação. A ideia é, dentro do possível, conhecer um pouco mais sobre o perfil dos usuários: conhecimentos prévios, relação com a tecnologia, relações hierárquicas, etc.
 
