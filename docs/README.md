@@ -19,10 +19,7 @@ O template para o site é estruturado e permite que a equipe evolua a documenta�
 Esta seção traz explicações breves sobre o conjunto de artefatos que precisam ser incluídos na documentação do projeto com uma conjunto de links importantes para que se entenda como criar cada coisa. 
 
 ## Problema
-
-Nesse momento você deve apresentar o problema que a sua aplicação deve resolver. No entanto, não é a hora de comentar sobre a aplicação. Descreva também o contexto em que essa aplicação será usada, se houver: empresa, tecnologias, etc. Novamente, descreva apenas o que de fato existir, pois ainda não é a hora de apresentar requisitos detalhados ou projetos.
-
-Nesse momento, o grupo pode optar por fazer uso de ferramentas como Design Thinking, que permite um olhar de ponta a ponta para o problema.
+A nossa aplicação busca amenizar a ansiedade, a tristeza e a raiva, ajudando o usuário a entender e controlar melhor essas emoções. Qualquer pessoa que tenha algum desses problemas pode usar o nosso site, mas o foco maior é em pessoas entre 15 e 25 anos.
 
 **Links Úteis**:
 
