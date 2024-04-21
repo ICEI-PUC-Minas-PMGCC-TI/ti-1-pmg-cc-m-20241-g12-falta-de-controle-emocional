@@ -37,6 +37,8 @@ Qualquer pessoa que tenha algum desses problemas pode usar o nosso site, mas o f
 ## Personas
 Bruno:
 ![image](https://github.com/ICEI-PUC-Minas-PMGCC-TI/ti-1-pmg-cc-m-20241-g12-falta-de-controle-emocional/assets/165681003/e55e63d6-be29-42bd-bd17-6eeeb3b5ae47)
+Ana Catarina:
+![image](https://github.com/ICEI-PUC-Minas-PMGCC-TI/ti-1-pmg-cc-m-20241-g12-falta-de-controle-emocional/assets/165681003/24df5d10-3df6-45f6-9060-2d79c9becefe)
 
 
 ## Histórias de Usuários
