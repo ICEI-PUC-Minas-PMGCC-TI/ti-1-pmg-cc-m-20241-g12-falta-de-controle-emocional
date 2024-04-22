@@ -58,7 +58,6 @@ Ana Catarina:
       <th scope="row">Sandra</th>
       <td>
         Me sentir menos ansiosa e com mal estar
-        >
       </td>
       <td>Informações pertinentes e verídicas sobre temas de ansiedade</td>
     </tr>
@@ -72,9 +71,9 @@ Ana Catarina:
     <tr>
       <th scope="row">Lívia</th>
       <td>
-        Quero afetar menos minha vida pessoal, e estar menos tensa com meu presente.
+        Quer afetar menos sua vida pessoal, e estar menos tensa com seu presente.
       </td>
-      <td>Acesso a psicólogos mais acessíveis e próximos a mim.</td>
+      <td>Acesso a psicólogos mais acessíveis e próximos a ela</td>
     </tr>
   </tbody>
 </table>
