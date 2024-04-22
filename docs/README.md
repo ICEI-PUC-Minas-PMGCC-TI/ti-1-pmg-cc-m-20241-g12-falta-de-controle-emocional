@@ -29,7 +29,8 @@ O objetivo ao desenvolver o software é amenizar os problemas da ansiedade, da t
 Atualmente muitas pessoas se sentem ansiosas, principalmente no Brasil, onde o índice de ansiedade é altíssimo. Isso se deve à pandemia, como nos outros países, mas também devido às várias mudanças na economia, o alto índice de desemprego, a falta de segurança pública, dentre outros. Também por causa desses fatores, o Brasil é um dos países com maior índice de depressão e, por isso, amenizar a ansiedade e a depressão é tão importante. As formas do nosso site de tentar amenizá-los também funciona para a raiva, por isso a incluímos em nossos objetivos.
 
 ## Público-Alvo
-Qualquer pessoa que tenha algum desses problemas pode usar o nosso site, mas o foco maior é em pessoas entre 15 e 30 anos. Pessoas mais pobres podem usar o site também, visto que o foco maior dele é para celular, assim não necessitando de se ter um computador. O site é bem fácil de se entender e, por isso, não é preciso ter um conhecimento sobre tecnologia para se usar, apenas o básico, como clicar em vídeos, em artigos, selecionar opções, etc.
+O site está aberto a qualquer pessoa que enfrente problemas emocionais, mas temos um foco particular em indivíduos entre 15 e 30 anos. Além disso, garantimos acessibilidade, pois priorizamos a compatibilidade com dispositivos móveis, dispensando a necessidade de um computador. A interface é intuitiva e simples de entender, projetada para ser utilizada por qualquer pessoa, independentemente do nível de familiaridade com tecnologia. Não é necessário um conhecimento avançado, apenas habilidades básicas.
+
 ![image](https://github.com/ICEI-PUC-Minas-PMGCC-TI/ti-1-pmg-cc-m-20241-g12-falta-de-controle-emocional/assets/165681003/da5fc735-a15e-4966-8e66-63ce55d27cf4)
 
 ![image](https://github.com/ICEI-PUC-Minas-PMGCC-TI/ti-1-pmg-cc-m-20241-g12-falta-de-controle-emocional/assets/165681003/b17e553b-841e-40ca-9bdd-b6e88b10ba85)
@@ -42,15 +43,53 @@ Ana Catarina:
 
 
 ## Histórias de Usuários
-Sandra - Ela tem bastante controle emocional atualmente, porque trabalhou isso ao longo dos anos, trabalhou em sua impulsividade, ansiedade, raiva e depressão para se tornar uma pessoa melhor, e ela continua trabalhando nisso todos os dias até hoje.
-Pedro - Seu controle emocional é instável e oscila dependendo do que acontece ao longo do dia.
-Lívia - Em uma escala de 1 a 10, ela considera que seu controle emocional é igual a 7. Ela tem dificuldade para entender o que está sentindo e é muito emotiva e ansiosa.
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">EU COMO...</th>
+      <th scope="col">
+        QUERO/PRECISO...
+      </th>
+      <th scope="col">PARA...</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Sandra</th>
+      <td>
+        Me sentir menos ansiosa e com mal estar
+        >
+      </td>
+      <td>Informações pertinentes e verídicas sobre temas de ansiedade</td>
+    </tr>
+    <tr>
+      <th scope="row">Pedro</th>
+      <td>
+        Pensar menos no meu futuro e gastar mais tempo com soluções
+      </td>
+      <td>Ferramentas entratégicas para colocar soluções em prática, como vídeos e fotos de conteúdos para controle mental.</td>
+    </tr>
+    <tr>
+      <th scope="row">Lívia</th>
+      <td>
+        Quero afetar menos minha vida pessoal, e estar menos tensa com meu presente.
+      </td>
+      <td>Acesso a psicólogos mais acessíveis e próximos a mim.</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Requisitos
-Requisitos funcionais:
-Cadastro de usuário, vídeos relaxantes, seção de vivências e dicas de relaxamento, teste de personalidade e informações sobre psicólogos perto de você.
-Requisitos não funcionais:
-Privacidade de informações pessoais e pasicólogos confiáveis.
+### Requisitos funcionais:
+- Cadastro de usuário.
+- Vídeos relaxantes.
+- Seção de vivências e dicas de relaxamento.
+- Teste de personalidade.
+- Psicólogos verificados pelo CEPP.
+#### Requisitos não funcionais:
+- Privacidade de informações pessoais.
+- Psicólogos verificados pelo CEPP.
+- Fotos e vídeos de alta qualidade.
 
 ## User Flow
 
@@ -63,6 +102,13 @@ Wireframes são protótipos das telas da aplicação usados em design de interfa
 
 ## Gestão de Projetos
 A metodologia utilizada foi o kanban.
-Ana Luíza ficou responsável por fazer a documentação do trabalho, Mariana por fazer o wireframe e o design thinking e João por fazer o mapa de empatia, os slides da apresentação e o roteiro do pitch.
-https://miro.com/app/board/uXjVKdBjxi4=/
+### Divisão de Tarefas:
+- Ana Luíza ficou responsável por fazer a documentação do trabalho
+- Mariana por fazer o wireframe e o design thinking
+- João por fazer o mapa de empatia, os slides da apresentação e o roteiro do pitch.
+
+### Links Importantes
+- Miro: https://miro.com/app/board/uXjVKdBjxi4=/
+- Figma: https://www.figma.com/proto/Wi3nFBhe7xOvKyJs90Cvr7/TIAW?page-id=0%3A1&type=design&node-id=4-2&viewport=501%2C434%2C0.36&t=31ZPoaDplrWXTEDQ-1&scaling=scale-down&starting-point-node-id=4%3A2&mode=design
+
 
