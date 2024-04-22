@@ -85,7 +85,7 @@ Ana Catarina:
 - Vídeos relaxantes.
 - Seção de vivências e dicas de relaxamento.
 - Teste de personalidade.
-- Psicólogos verificados pelo CEPP.
+- Acesso a psicólgos próximos.
 #### Requisitos não funcionais:
 - Privacidade de informações pessoais.
 - Psicólogos verificados pelo CEPP.
