@@ -1,15 +1,31 @@
+@media (min-width: 730px) {
+  .mobile__links {
+    display: none;
+  }
+}
+
+@media (max-width: 730px) {
+  .navbar__list {
+    display: none;
+  }
+
+  .navbar {
+    margin: 0rem 1rem;
+  }
+}
+
 .navbar {
   width: auto;
   height: 4rem;
   margin: 0rem 6rem;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .navbar__logo {
-  font-weight: bolder;
-  font-size: 1.5rem;
+  font-weight: 800;
+  font-size: 1.25rem;
   cursor: pointer;
 }
 
@@ -23,6 +39,10 @@
 
 .item {
   padding: 0.25rem 0.5rem;
+}
+
+.item--last {
+  border-top: 1px #ededed solid;
 }
 
 .item:hover {
@@ -82,20 +102,4 @@
 
 .show {
   display: block;
-}
-
-@media (min-width: 730px) {
-  .mobile__links {
-    display: none;
-  }
-}
-
-@media (max-width: 730px) {
-  .navbar__list {
-    display: none;
-  }
-
-  .navbar {
-    margin: 0rem 3rem;
-  }
 }

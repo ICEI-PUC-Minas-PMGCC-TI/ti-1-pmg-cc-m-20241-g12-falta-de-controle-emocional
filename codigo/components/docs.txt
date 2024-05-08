@@ -8,3 +8,12 @@ Utilização dos Componentes:
         Importar os links:   
         - CSS: <link rel="stylesheet" href="/assets/css/components/navbar.css" />
         - JS: <script src="/components/navbar.js"></script>
+    
+    Footer:
+
+        Chamar no html a seguinte tag: 
+            <footer class="footer" profiles__list></footer>
+
+        Importar os links:   
+        - CSS: <link rel="stylesheet" href="/assets/css/components/footer.css" />
+        - JS: <script src="/components/footer.js"></script>

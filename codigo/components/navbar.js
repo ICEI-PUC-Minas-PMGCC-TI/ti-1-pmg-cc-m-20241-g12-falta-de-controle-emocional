@@ -20,7 +20,9 @@ const links = [
   },
 ];
 
-const listComponent = (links) => {
+const token = false;
+
+const listLinks = (links) => {
   return links
     .map((item) => {
       return `
@@ -32,11 +34,25 @@ const listComponent = (links) => {
     .join("");
 };
 
+function auth(token) {
+    if(token) {
+        return `
+         <li class="item" href="#">Profile</li>
+         <li class="item" href="#">Logout</li>
+        `
+    }
+
+    return `
+        <li class="item" href="#">Entrar</li>
+        <li class="item" href="#">Cadastrar</li>
+    `
+}
+
 function navbar(links) {
   return `
         <div class="navbar__logo">Harmonia</div>
         <ul class="navbar__list">
-            ${listComponent(links)}
+            ${listLinks(links)}
         </ul>
         <div class="dropdown">
             <svg class="dropdown__icon" onclick="myFunction()" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
@@ -46,10 +62,9 @@ function navbar(links) {
             </svg>
             <div id="dropdown__menu" class="dropdown__menu__content">
                 <ul class="dropdown__menu__list">
-                    <li class="item" href="#">Entrar</li>
-                    <li class="item" href="#">Cadastrar</li>
-                    <span class="mobile__links">
-                        ${listComponent(links)}
+                    ${auth(token)}
+                    <span class="mobile__links item--last">
+                        ${listLinks(links)}
                     </span>
                 </ul>
             </div>
@@ -57,5 +72,5 @@ function navbar(links) {
     `;
 }
 
-const el = document.querySelector("[links-list]");
-el.innerHTML = navbar(links);
+const ll = document.querySelector("[links-list]");
+ll.innerHTML = navbar(links);

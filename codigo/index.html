@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Harmonia</title>
 
-    <!-- Css General -->
+    <!-- CSS -->
     <link rel="stylesheet" href="/assets/css/style.css" />
-
-    <!-- Css Components -->
+    <link rel="stylesheet" href="/assets/css/index.css" />
     <link rel="stylesheet" href="/assets/css/components/navbar.css" />
+    <link rel="stylesheet" href="/assets/css/components/footer.css" />
 
     <!-- Bootstrap -->
     <link
@@ -21,35 +21,38 @@
   </head>
 
   <body>
-    <nav links-list class="navbar"></nav>
-    <!--<nav links-list class="navbar">
-      <div class="navbar__logo">Harmonia</div>
-      <ul class="navbar__list">
-        <li class="navbar__item">
-            <span>Home</span>
-            <span>Desabafos</span>
-            <span>Conteúdo</span>
-            <span>Psicólogos</span>
-            <span>Dicas</span>
-        </li>
-      </ul>
-      <div class="navbar__menu" onclick="myFunction()">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-          <path
-            d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"
-          />
-        </svg>
+    <header>
+      <!-- Component NavBar-->
+      <nav links-list class="navbar"></nav>
+      <div class="header">
+        <img src="/assets/img/capa.jpg" alt="Capa" class="header__img" />
+        <div class="header--overlay">
+          <h1 class="header__title">
+            Oferencendo equilíbrio as suas marés emocionais!
+          </h1>
+          <p class="header__text">
+            Descubra paz em cada interação - Harmonia é sua fonte de
+            tranquilidade, onde quer que esteja!
+          </p>
+        </div>
       </div>
-      <div id="myDropdown" class="dropdown-content">
-        <a href="#">Link 1</a>
-        <a href="#">Link 2</a>
-        <a href="#">Link 3</a>
-      </div>
-    </nav>-->
+    </header>
 
-    <!-- Components -->
+    <!-- Desabafos -->
+    <section class="section">Desabafo</section>
+
+    <!-- Conteúdos -->
+    <section class="section">Conteúdos</section>
+
+    <!-- Psicólgos -->
+    <section class="section">Psicólgos</section>
+
+    <!--Footer-->
+    <footer class="footer" profiles__list></footer>
+
+    <!-- JS -->
     <script src="/components/navbar.js"></script>
-
+    <script src="/components/footer.js"></script>
     <!-- Bootstrap -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
