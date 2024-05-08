@@ -1,0 +1,15 @@
+@font-face {
+    font-family: 'Raleway';
+    src: url('/assets/fonts/Ralewey.ttf') format('truetype');
+}
+
+* {
+    margin: 0%;
+    padding: 0%;
+    font-family: 'Raleway';
+    color: #242424 !important;
+}
+
+html, body {
+    background-color: #F2F4F3;
+}

@@ -1,0 +1,10 @@
+Utilização dos Componentes:
+
+    Nav-Bar:
+
+        Chamar no html a seguinte tag: 
+            <nav links-list class="navbar"></nav>
+
+        Importar os links:   
+        - CSS: <link rel="stylesheet" href="/assets/css/components/navbar.css" />
+        - JS: <script src="/components/navbar.js"></script>
