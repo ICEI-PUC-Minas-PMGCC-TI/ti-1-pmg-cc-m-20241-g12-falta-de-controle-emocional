@@ -1,0 +1,8 @@
+Antes de criar um novo arquivo, olhe instrução nos arquvios docs em:
+
+-> /components/docs.txt
+    Para utilização de Nav Bar e Footer nas páginas
+
+-> /modules/docs.txt
+    Para criar as páginas (html,css e js) de acordo com a estrutura de 
+    arquivos corretas
