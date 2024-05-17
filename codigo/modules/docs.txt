@@ -1,0 +1,27 @@
+Modo de Utilização da Pasta
+
+    Criar pasta de acordo com a atividade, por exemplo:
+
+    -> Criação da função de produtos. Para produtos deve:
+
+        - Página que mostra os produtos
+        - Página que cria um novo produtos
+
+        Estrutura de arquivos:
+        ├── modulos
+            ├── produtos
+                ├── cadProduto.html // cadastra produtos
+                ├── mosProduto.html // mostra produtos
+            ├── usuarios
+                ├── cadUsuario.html // cadastra usuário
+                ├── mosUsuario.html // mostra usuario
+
+    -> Criação de Arquivos JavaScript e CSS
+
+        Quando se criar uma página nova, cria também arquivos CSS e JS com o mesmo 
+        nome. Por exemplo:
+            -> Nome do arquivo: cadProduto.html
+                - Arquivo CSS: cadProduto.css                
+                - Arquivo CSS: cadProduto.js
+        
+        !! Em cada nova página criada deve puxar o arquivo CSS geral (style.css)
