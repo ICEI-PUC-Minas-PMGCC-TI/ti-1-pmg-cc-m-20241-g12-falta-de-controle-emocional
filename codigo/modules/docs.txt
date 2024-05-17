@@ -19,9 +19,13 @@ Modo de Utilização da Pasta
     -> Criação de Arquivos JavaScript e CSS
 
         Quando se criar uma página nova, cria também arquivos CSS e JS com o mesmo 
-        nome (dentro das pastas de css e js). Por exemplo:
+        nome. Por exemplo:
             -> Nome do arquivo: cadProduto.html
                 - Arquivo CSS: cadProduto.css                
                 - Arquivo CSS: cadProduto.js
+
+        Esses arquivos devem estar dentro das paginas de CSS e JS. Por exemplo:
+            -> /css/pages/cadProduto.css
+            -> /js/pages/cadProduto.js
         
         !! Em cada nova página criada deve puxar o arquivo CSS geral (style.css)
