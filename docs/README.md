@@ -58,7 +58,6 @@ Ana Catarina:
       <th scope="row">Sandra</th>
       <td>
         Me sentir menos ansiosa e com mal estar
-        >
       </td>
       <td>Informações pertinentes e verídicas sobre temas de ansiedade</td>
     </tr>
@@ -72,9 +71,9 @@ Ana Catarina:
     <tr>
       <th scope="row">Lívia</th>
       <td>
-        Quero afetar menos minha vida pessoal, e estar menos tensa com meu presente.
+        Quer afetar menos sua vida pessoal, e estar menos tensa com seu presente.
       </td>
-      <td>Acesso a psicólogos mais acessíveis e próximos a mim.</td>
+      <td>Acesso a psicólogos mais acessíveis e próximos a ela</td>
     </tr>
   </tbody>
 </table>
@@ -85,7 +84,7 @@ Ana Catarina:
 - Vídeos relaxantes.
 - Seção de vivências e dicas de relaxamento.
 - Teste de personalidade.
-- Psicólogos verificados pelo CEPP.
+- Acesso a psicólgos próximos.
 #### Requisitos não funcionais:
 - Privacidade de informações pessoais.
 - Psicólogos verificados pelo CEPP.
@@ -93,11 +92,14 @@ Ana Catarina:
 
 ## User Flow
 
-Fluxo de usuário (User Flow) é uma técnica que permite ao desenvolvedor mapear todo fluxo de telas do site ou app. Essa técnica funciona para alinhar os caminhos e as possíveis ações que o usuário pode fazer junto com os membros de sua equipe.
+![userflow](https://github.com/ICEI-PUC-Minas-PMGCC-TI/ti-1-pmg-cc-m-20241-g12-falta-de-controle-emocional/assets/165406204/929ea8ee-ce64-427e-97c8-e2f80cf27bed)
+
 
 ## Wireframes
+Para uma melhor visualização do wireframe do projeto, por favor, baixe o arquivo abaixo e examine as telas disponíveis.
+<br/>
+[Download](https://github.com/ICEI-PUC-Minas-PMGCC-TI/ti-1-pmg-cc-m-20241-g12-falta-de-controle-emocional/files/15056477/arquivo.pdf)
 
-Wireframes são protótipos das telas da aplicação usados em design de interface para sugerir a estrutura de um site web e seu relacionamentos entre suas páginas. Um wireframe web é uma ilustração semelhante ao layout de elementos fundamentais na interface.
 
 
 ## Gestão de Projetos
@@ -107,7 +109,7 @@ A metodologia utilizada foi o kanban.
 - Mariana por fazer o wireframe e o design thinking
 - João por fazer o mapa de empatia, os slides da apresentação e o roteiro do pitch.
 
-### Links Importantes
+## Links Importantes
 - Miro: https://miro.com/app/board/uXjVKdBjxi4=/
 - Figma: https://www.figma.com/proto/Wi3nFBhe7xOvKyJs90Cvr7/TIAW?page-id=0%3A1&type=design&node-id=4-2&viewport=501%2C434%2C0.36&t=31ZPoaDplrWXTEDQ-1&scaling=scale-down&starting-point-node-id=4%3A2&mode=design
 
