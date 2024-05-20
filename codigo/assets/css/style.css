@@ -11,7 +11,7 @@
 }
 
 @media (max-width: 730px) {
-   section {
+   .section {
       padding: 0rem 1rem;
    }
 }
