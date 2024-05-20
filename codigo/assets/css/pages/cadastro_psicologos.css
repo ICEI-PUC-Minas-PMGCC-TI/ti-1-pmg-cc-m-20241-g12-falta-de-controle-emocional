@@ -1,0 +1,41 @@
+.btn_outline i {
+   fill: #1e1e1e;
+   height: 0.75rem;
+   padding-right: 0.25rem;
+}
+
+.form {
+   padding: 1rem 0rem;
+   display: flex;
+   flex-direction: column;
+}
+
+.form__title {
+   font-weight: bold;
+   padding-bottom: 1rem;
+}
+
+.form__label {
+   font-weight: bold;
+}
+
+.form__input {
+   margin-bottom: 1rem;
+   background-color: rgba(0, 0, 0, 0.02);
+   border: #1e1e1e59 solid 1px;
+   border-radius: 0.5rem;
+   padding: 0.25rem 0.25rem;
+}
+
+.form__action {
+   padding: 1rem 0rem;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+}
+
+.form__action .btn_outline {
+   width: 100%;
+   margin: 0.25rem;
+   padding: 0.25rem 0rem;
+}
