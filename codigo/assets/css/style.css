@@ -22,7 +22,13 @@ section {
    margin: 2rem 0rem;
 }
 
-.btn_back {
+.btn_primary {
+   background-color: #2a63cf;
+   color: #fff;
+   border-radius: 0.5rem;
+}
+
+.btn_outline {
    background-color: transparent;
    border: #1e1e1e 1px solid;
    color: #1e1e1e !important;
