@@ -24,8 +24,10 @@ section {
 
 .btn_primary {
    background-color: #2a63cf;
-   color: #fff;
+   color: #fff !important;
    border-radius: 0.5rem;
+   border: none;
+   padding: 0.25rem 1rem;
 }
 
 .btn_outline {
