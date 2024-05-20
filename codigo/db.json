@@ -1,4 +1,18 @@
 {
    "usuarios": {},
-   "psicologos": {}
+   "psicologos": {},
+   "atendimento": [
+      {
+         "id": 1,
+         "tipo": "Presencial"
+      },
+      {
+         "id": 2,
+         "tipo": "Híbrido"
+      },
+      {
+         "id": 3,
+         "tipo": "Remoto"
+      }
+   ]
 }
