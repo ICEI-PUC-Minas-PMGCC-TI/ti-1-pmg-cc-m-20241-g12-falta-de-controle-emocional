@@ -44,10 +44,8 @@
             <input class="form__input" type="text" placeholder="PUC Minas">
 
             <label class="form__label" for="">Atendimento</label>
-            <select class="form__input" name="" id="">
-                <option value="">Presencial</option>
-                <option value="">Híbrido</option>
-                <option value="">Remoto</option>
+            <select class="form__input" name="" id="select_atd">
+                <option value="" disabled selected>Escolha</option>
             </select>
 
             <button class="btn_primary">Salvar</button>
@@ -58,7 +56,10 @@
         </form>
     </section>
 
+    <ul id="atd"></ul>
+
     <script src="/components/navbar.js"></script>
+    <script src="/assets/js/pages/cadastro_psicologos.js"></script>
 </body>
 
 </html>

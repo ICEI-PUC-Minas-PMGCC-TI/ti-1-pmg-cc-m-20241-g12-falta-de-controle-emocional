@@ -1,7 +1,7 @@
 {
    "usuarios": {},
    "psicologos": {},
-   "atendimento": [
+   "atendimentos": [
       {
          "id": 1,
          "tipo": "Presencial"
