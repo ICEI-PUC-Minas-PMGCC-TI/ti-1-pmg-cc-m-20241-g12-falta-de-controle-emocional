@@ -1,11 +1,33 @@
 @font-face {
-    font-family: 'Raleway';
-    src: url('/assets/fonts/Ralewey.ttf') format('truetype');
+   font-family: "Raleway";
+   src: url("/assets/fonts/Ralewey.ttf") format("truetype");
 }
 
 * {
-    margin: 0%;
-    padding: 0%;
-    font-family: 'Raleway';
-    color: #242424 !important;
+   margin: 0%;
+   padding: 0%;
+   font-family: "Raleway";
+   color: #242424 !important;
+}
+
+@media (max-width: 730px) {
+   section {
+      padding: 0rem 1rem;
+   }
+}
+
+section {
+   padding: 0rem 6rem;
+   min-height: 10rem;
+   margin: 2rem 0rem;
+}
+
+.btn_back {
+   background-color: transparent;
+   border: #1e1e1e 1px solid;
+   color: #1e1e1e !important;
+   border-radius: 2px;
+   padding: 0.125rem 0.5rem;
+   font-size: 12px;
+   font-weight: 700;
 }
