@@ -36,6 +36,11 @@ section {
    margin: 2rem 0rem;
 }
 
+button {
+   background-color: transparent;
+   border: none;
+}
+
 .btn_primary {
    background-color: #22478e;
    color: #fff !important;

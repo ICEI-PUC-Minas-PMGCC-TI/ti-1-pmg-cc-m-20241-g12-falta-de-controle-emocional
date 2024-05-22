@@ -47,11 +47,19 @@
    padding: 0.25rem 0.5rem;
 }
 
+.item:hover {
+   text-decoration: underline;
+   cursor: pointer;
+}
+
 .item--last {
    border-top: 1px #ededed solid;
 }
+.item .item--style {
+   margin: 0;
+}
 
-.item:hover {
+.item--style:hover {
    text-decoration: underline;
    cursor: pointer;
 }

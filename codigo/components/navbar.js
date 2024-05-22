@@ -1,20 +1,29 @@
 let token = false;
 
 // Usuario logado
-function getLoginStatus() {
-   const user = localStorage.getItem("userLoginStatus");
+function get_status() {
+   const user = localStorage.getItem("status");
    return user ? JSON.parse(user) : null;
 }
 
-function checkLogin() {
-   const user = getLoginStatus();
+function check() {
+   const user = get_status();
    if (user) {
       token = true;
       console.log("Usuário está logado:", user);
    }
 }
 
-checkLogin();
+check();
+
+// Logout
+function logout() {
+   localStorage.removeItem("status");
+   sessionStorage.removeItem("status");
+   token = false;
+   location.reload();
+   alert("Logout realizado!");
+}
 
 // DropDown
 function myFunction() {
@@ -59,14 +68,14 @@ const listLinks = (links) => {
 function auth(token) {
    if (token) {
       return `
-         <li class="item" href="#">Profile</li>
-         <li class="item" href="#">Logout</li>
+         <li class="item">Profile</li>
+         <li><button id="btn_logout" class="item">Logout</button></li>
         `;
    }
 
    return `
-        <a class="item" href="http://127.0.0.1:5500/modules/login/entrar.html">Entrar</a>
-        <a class="item" href="http://127.0.0.1:5500/modules/login/cadastro.html">Cadastrar</a>
+        <a class="item" href="http://127.0.0.1:5500/modules/login/entrar.html"><p class="item--style">Entrar</p></a>
+        <a class="item" href="http://127.0.0.1:5500/modules/login/cadastro.html"><p class="item--style">Cadastrar</p></a>
     `;
 }
 
@@ -96,3 +105,7 @@ function navbar(links) {
 
 const ll = document.querySelector("[links-list]");
 ll.innerHTML = navbar(links);
+
+if (token) {
+   document.getElementById("btn_logout").addEventListener("click", logout);
+}

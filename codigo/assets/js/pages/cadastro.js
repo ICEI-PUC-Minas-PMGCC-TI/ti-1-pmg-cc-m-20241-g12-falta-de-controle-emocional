@@ -62,19 +62,3 @@ async function registraUsuario(event) {
 
 // Eventos de submissão dos formulários
 document.getElementById("form_usu").addEventListener("submit", registraUsuario);
-
-// User ID
-function getLoginStatus() {
-   const user = localStorage.getItem("userLoginStatus");
-   return user ? JSON.parse(user) : null;
-}
-
-function checkLogin() {
-   const user = getLoginStatus();
-   if (user) {
-      console.log("Usuário está logado:", user);
-      message(`Bem-vindo, ${user.name}`, "success");
-   }
-}
-
-checkLogin();

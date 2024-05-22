@@ -13,19 +13,19 @@ function message(message, type) {
 }
 
 // Função para salvar o estado de login
-function setLoginStatus(user) {
-   localStorage.setItem("userLoginStatus", JSON.stringify(user));
+function set_status(user) {
+   localStorage.setItem("status", JSON.stringify(user));
 }
 
 // Função para obter o estado de login
-function getLoginStatus() {
-   const user = localStorage.getItem("userLoginStatus");
+function get_status() {
+   const user = localStorage.getItem("status");
    return user ? JSON.parse(user) : null;
 }
 
 // Função para verificar o estado de login
-function checkLogin() {
-   const user = getLoginStatus();
+function check() {
+   const user = get_status();
    if (user) {
       console.log("Usuário está logado:", user);
       message(`Bem-vindo, ${user.name}`, "success");
@@ -47,7 +47,7 @@ async function loginUser(event) {
       const user = users.find((u) => u.email === data.email && u.senha === data.senha);
       if (user) {
          console.log("Login bem-sucedido:", user);
-         setLoginStatus(user);
+         set_status(user);
          message("Login bem-sucedido", "success");
          window.location.replace("http://127.0.0.1:5500/index.html");
       } else {
@@ -64,4 +64,4 @@ async function loginUser(event) {
 document.getElementById("form_usu_entrar").addEventListener("submit", loginUser);
 
 // Verificar o estado de login na carga da página
-checkLogin();
+check();
