@@ -1,75 +1,77 @@
 // URLs
-const url_atd = "http://localhost:3000/atendimentos";
-const url_psi = "http://localhost:3000/psicologos";
+const URL_ATD = "http://localhost:3000/atendimentos";
+const URL_PSI = "http://localhost:3000/psicologos";
 
-// Mostra tipos de atendimentos
-const select = document.getElementById("select_atd");
-fetch(url_atd)
-   .then((resp) => resp.json())
-   .then(function (data) {
-      let atds = data;
-      return atds.map(function (atd) {
-         let option = createList("option");
-         option.innerHTML = `${atd.tipo}`;
-         let value = option.setAttribute("value", atd.id);
-         append(select, option);
+// Mensagem na tela
+function message(message, type) {
+   msg = document.getElementById("msg");
+
+   // Mostra a função por 6s
+   setTimeout(function () {
+      msg.classList.add("none");
+   }, 6000);
+   msg.classList.remove("none");
+   msg.innerHTML = `<div class="${type}">` + message + "</div>";
+}
+
+// Recebe uma URL
+// Retorna uma resposta em JSON
+async function fetchData(url) {
+   const response = await fetch(url);
+   return response.json();
+}
+
+// Popula o select com tipos de atendimentos
+async function populateAtendimentos() {
+   const select = document.getElementById("select_atd");
+
+   try {
+      const atendimentos = await fetchData(URL_ATD);
+      atendimentos.forEach((atd) => {
+         const option = document.createElement("option");
+         option.innerHTML = atd.tipo;
+         option.value = atd.id;
+         select.appendChild(option);
       });
-   })
-   .catch(function (error) {
-      console.log(error);
-   });
-
-function createList(element) {
-   return document.createElement(element);
+   } catch (error) {
+      console.error("Erro ao buscar tipos de atendimentos:", error);
+      message("Erro ao buscar atendimentos", "error");
+   }
 }
 
-function append(parent, el) {
-   return parent.appendChild(el);
-}
-
-// Cadastra psicólogos
-document.getElementById("form_psi").addEventListener("submit", async function (event) {
+// Cadastro de psicólogos
+async function registerPsicologo(event) {
    event.preventDefault();
 
-   const form_data = new FormData(this);
+   const form = event.target;
+   const formData = new FormData(form);
+   const data = Object.fromEntries(formData);
 
-   // Pegar qtd de psicologos cadastrados
+   const request = new Request(URL_PSI, {
+      method: "POST",
+      body: JSON.stringify(data),
+      headers: {
+         "Content-Type": "application/json",
+      },
+   });
+
    try {
-      const newId = Math.floor(Math.random() * 100);
-
-      const data = {
-         id: newId,
-         cpf: form_data.get("cpf"),
-         cepp: form_data.get("cepp"),
-         endereco: form_data.get("endereco"),
-         formacao: form_data.get("formacao"),
-         atendimento: parseInt(form_data.get("atendimento")),
-      };
-
-      var request = new Request(url_psi, {
-         method: "POST",
-         body: JSON.stringify(data),
-         headers: {
-            "Content-Type": "application/json",
-         },
-      });
-
-      fetch(request).then(function () {
-         console.log(request);
-      });
-
-      console.log(data);
+      const response = await fetch(request);
+      if (response.ok) {
+         console.log("Psicólogo cadastrado com sucesso:", data);
+         message("Psicólogo cadastrado com sucesso", "sucess");
+      } else {
+         console.error("Erro ao cadastrar psicólogo:", response.statusText);
+         message("Erro ao cadastrar psicólogo", "error");
+      }
    } catch (error) {
       console.error("Erro ao cadastrar novo psicólogo:", error);
+      message("Erro ao cadastrar psicólogo", "error");
    }
-});
+}
 
-// Edit Psicologo
-document.getElementById("form_psi_edit").addEventListener("submit", function () {
-   console.log("clicou no edit");
-});
+// Eventos de submissão dos formulários
+document.getElementById("form_psi").addEventListener("submit", registerPsicologo);
 
-// Delete Psicologo
-document.getElementById("form_psi_delete").addEventListener("submit", function () {
-   console.log("clicou no delete");
-});
+// Inicialização
+populateAtendimentos();
