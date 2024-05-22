@@ -1,35 +1,48 @@
 {
-   "usuarios": {},
-   "psicologos": [
-      {
-         "id": "41d1",
-         "cpf": "158.163.766-75",
-         "cepp": "555555555",
-         "endereco": "Avenida Trinta e Um de Março",
-         "formacao": "UFMG",
-         "atendimento": "1"
-      },
-      {
-         "id": "6dcd",
-         "cpf": "158.163.766-75",
-         "cepp": "00000000",
-         "endereco": "Avenida Trinta e Um de Março",
-         "formacao": "UFMG",
-         "atendimento": "2"
-      }
-   ],
-   "atendimentos": [
-      {
-         "id": "1",
-         "tipo": "Presencial"
-      },
-      {
-         "id": "2",
-         "tipo": "Híbrido"
-      },
-      {
-         "id": "3",
-         "tipo": "Remoto"
-      }
-   ]
+  "usuarios": [
+    {
+      "id": "b4d9f03e-1e8f-47a5-8975-304051175704",
+      "name": "Mariana",
+      "email": "marianaalmeidafga@gmail.com",
+      "senha": "1234567"
+    },
+    {
+      "id": "351e818c-fe1d-4a34-8165-261777530757",
+      "name": "tyjusurij@mailinator.com",
+      "email": "jepybiko@mailinator.com",
+      "senha": "Pa$$w0rd!"
+    }
+  ],
+  "psicologos": [
+    {
+      "id": "41d1",
+      "cpf": "158.163.766-75",
+      "cepp": "555555555",
+      "endereco": "Avenida Trinta e Um de Março",
+      "formacao": "UFMG",
+      "atendimento": "1"
+    },
+    {
+      "id": "6dcd",
+      "cpf": "158.163.766-75",
+      "cepp": "00000000",
+      "endereco": "Avenida Trinta e Um de Março",
+      "formacao": "UFMG",
+      "atendimento": "2"
+    }
+  ],
+  "atendimentos": [
+    {
+      "id": "1",
+      "tipo": "Presencial"
+    },
+    {
+      "id": "2",
+      "tipo": "Híbrido"
+    },
+    {
+      "id": "3",
+      "tipo": "Remoto"
+    }
+  ]
 }

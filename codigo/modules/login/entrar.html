@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrar</title>
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="stylesheet" href="/assets/css/pages/cadastro.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <link rel="stylesheet" href="/assets/css/components/navbar.css" />
+</head>
+
+<body>
+    <nav links-list class="navbar"></nav>
+
+    <div id="msg" class="message none">
+        <!--<div  class="sucess">Messagem</div>-->
+    </div>
+
+    <section class="section">
+        <div class="container_form">
+            <form action="" class="form" id="form_usu_entrar">
+                <h3 class="form__title">Harmonia</h3>
+
+                <label class="form__label" for="">Email</label>
+                <input class="form__input" type="email" placeholder="nome@email.com" name="email" required>
+
+                <label class="form__label" for="">Senha</label>
+                <input class="form__input" type="password" name="senha" required minlength="6" maxlength="16">
+                <button class="btn_primary" type="submit">Entrar</button>
+            </form>
+        </div>
+    </section>
+
+    <script src="/assets/js/pages/entrar.js"></script>
+    <script src="/components/navbar.js"></script>
+</body>
+
+</html>
