@@ -59,7 +59,7 @@ async function registerPsicologo(event) {
       const response = await fetch(request);
       if (response.ok) {
          console.log("Psicólogo cadastrado com sucesso:", data);
-         message("Psicólogo cadastrado com sucesso", "sucess");
+         message("Psicólogo cadastrado com sucesso", "success");
       } else {
          console.error("Erro ao cadastrar psicólogo:", response.statusText);
          message("Erro ao cadastrar psicólogo", "error");
