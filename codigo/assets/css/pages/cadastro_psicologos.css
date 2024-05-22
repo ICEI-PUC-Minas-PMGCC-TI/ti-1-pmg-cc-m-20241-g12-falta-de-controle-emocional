@@ -28,14 +28,17 @@
 }
 
 .form__action {
-   padding: 1rem 0rem;
    display: flex;
    flex-direction: row;
    justify-content: space-between;
 }
 
+.form__action form {
+   width: 100%;
+   margin: 0rem 0.125rem;
+}
+
 .form__action .btn_outline {
    width: 100%;
-   margin: 0.25rem;
-   padding: 0.25rem 0rem;
+   padding: 0.5rem 0rem;
 }

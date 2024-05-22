@@ -28,35 +28,38 @@
             <i class="fa-solid fa-arrow-left"></i>Voltar
         </button>
 
-        
-        <form action="" class="form">
+
+        <form action="" method="POST" class="form" id="form_psi">
             <h3 class="form__title">Cadastro de Psicólogos</h3>
             <label class="form__label" for="">CPF:</label>
-            <input class="form__input" type="text" placeholder="000.000.000-00">
+            <input class="form__input" type="text" placeholder="000.000.000-00" name="cpf">
 
             <label class="form__label" for="">CEPP:</label>
-            <input class="form__input" type="text" placeholder="00000-000">
+            <input class="form__input" type="text" placeholder="00000-000" name="cepp">
 
             <label class="form__label" for="">Endereço:</label>
-            <input class="form__input" type="text" placeholder="Avenida Brasil">
+            <input class="form__input" type="text" placeholder="Avenida Brasil" name="endereco">
 
             <label class="form__label" for="">Formação:</label>
-            <input class="form__input" type="text" placeholder="PUC Minas">
+            <input class="form__input" type="text" placeholder="PUC Minas" name="formacao">
 
             <label class="form__label" for="">Atendimento</label>
-            <select class="form__input" name="" id="select_atd">
+            <select class="form__input" id="select_atd" name="atendimento">
                 <option value="" disabled selected>Escolha</option>
             </select>
 
-            <button class="btn_primary">Salvar</button>
-            <div class="form__action">
-                <button class="btn_outline"><i class="fa-solid fa-pencil"></i>Editar</button>
-                <button class="btn_outline"><i class="fa-solid fa-trash"></i>Excluir</button>
-            </div>
+            <button class="btn_primary" type="submit">Salvar</button>
         </form>
-    </section>
 
-    <ul id="atd"></ul>
+        <div class="form__action">
+            <form id="form_psi_edit">
+                <button class="btn_outline" type="submit"><i class="fa-solid fa-pencil"></i>Editar</button>
+            </form>
+            <form id="form_psi_delete">
+                <button class="btn_outline" type="submit"><i class="fa-solid fa-trash"></i>Excluir</button>
+            </form>
+        </div>
+    </section>
 
     <script src="/components/navbar.js"></script>
     <script src="/assets/js/pages/cadastro_psicologos.js"></script>
