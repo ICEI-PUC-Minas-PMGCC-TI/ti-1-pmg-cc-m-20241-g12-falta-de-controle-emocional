@@ -1,6 +1,22 @@
 {
    "usuarios": {},
-   "psicologos": {},
+   "psicologos": [
+      {
+         "id": 1,
+         "cpf": "000.000.000-00",
+         "endereco": "Avenida Coração Eucarístico",
+         "formacao": "PUC Minas",
+         "atendimento": 1
+      },
+      {
+         "id": 2,
+         "cpf": "158.163.766-75",
+         "cepp": "00000000",
+         "endereco": "Avenida Trinta e Um de Março",
+         "formacao": "UFMG",
+         "atendimento": 2
+      }
+   ],
    "atendimentos": [
       {
          "id": 1,
