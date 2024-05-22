@@ -1,56 +1,78 @@
+let token = false;
+
+// Usuario logado
+function getLoginStatus() {
+   const user = localStorage.getItem("userLoginStatus");
+   return user ? JSON.parse(user) : null;
+}
+
+function checkLogin() {
+   const user = getLoginStatus();
+   if (user) {
+      token = true;
+      console.log("Usuário está logado:", user);
+   }
+}
+
+checkLogin();
+
+// DropDown
 function myFunction() {
-  document.getElementById("dropdown__menu").classList.toggle("show");
+   document.getElementById("dropdown__menu").classList.toggle("show");
 }
 
 const links = [
-  {
-    name: "Home",
-  },
-  {
-    name: "Desabafos",
-  },
-  {
-    name: "Conteúdo",
-  },
-  {
-    name: "Psicólogos",
-  },
-  {
-    name: "Dicas",
-  },
+   {
+      name: "Home",
+      link: "http://127.0.0.1:5500/index.html",
+   },
+   {
+      name: "Desabafos",
+      link: "http://127.0.0.1:5500/#",
+   },
+   {
+      name: "Conteúdo",
+      link: "http://127.0.0.1:5500/#",
+   },
+   {
+      name: "Psicólogos",
+      link: "http://127.0.0.1:5500/#",
+   },
+   {
+      name: "Dicas",
+      link: "http://127.0.0.1:5500/#",
+   },
 ];
 
-const token = false;
-
 const listLinks = (links) => {
-  return links
-    .map((item) => {
-      return `
+   return links
+      .map((item) => {
+         return `
         <li class="item">
             <span>${item.name}</span>
         </li>
       `;
-    })
-    .join("");
+      })
+      .join("");
 };
 
 function auth(token) {
-    if(token) {
-        return `
+   if (token) {
+      return `
          <li class="item" href="#">Profile</li>
          <li class="item" href="#">Logout</li>
-        `
-    }
+        `;
+   }
 
-    return `
-        <li class="item" href="#">Entrar</li>
-        <li class="item" href="#">Cadastrar</li>
-    `
+   return `
+        <a class="item" href="http://127.0.0.1:5500/modules/login/entrar.html">Entrar</a>
+        <a class="item" href="http://127.0.0.1:5500/modules/login/cadastro.html">Cadastrar</a>
+    `;
 }
 
 function navbar(links) {
-  return `
-        <div class="navbar__logo">Harmonia</div>
+   return `
+        <div class="navbar__logo"><a href="http://127.0.0.1:5500/index.html">Harmonia</a></div>
         <ul class="navbar__list">
             ${listLinks(links)}
         </ul>
