@@ -26,6 +26,10 @@
    }
 }
 
+a {
+   text-decoration: none !important;
+}
+
 section {
    padding: 0rem 6rem;
    min-height: 10rem;
@@ -33,11 +37,15 @@ section {
 }
 
 .btn_primary {
-   background-color: #2a63cf;
+   background-color: #22478e;
    color: #fff !important;
-   border-radius: 0.5rem;
+   border-radius: 0.25rem;
    border: none;
    padding: 0.25rem 1rem;
+}
+
+.btn_primary:hover {
+   background: #0a1e42;
 }
 
 .btn_outline {
@@ -45,7 +53,7 @@ section {
    border: #1e1e1e 1px solid;
    color: #1e1e1e !important;
    border-radius: 2px;
-   padding: 0.125rem 0.5rem;
+   padding: 0.125rem 0.25rem;
    font-size: 12px;
    font-weight: 700;
 }
@@ -67,7 +75,7 @@ section {
    border-radius: 0.5rem;
 }
 
-.sucess {
+.success {
    display: flex;
    align-items: center;
    width: 100%;
