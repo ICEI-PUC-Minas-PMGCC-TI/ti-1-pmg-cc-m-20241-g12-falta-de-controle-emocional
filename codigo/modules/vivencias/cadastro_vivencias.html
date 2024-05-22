@@ -4,27 +4,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sua vivência</title>
     <link rel="stylesheet" href="../../assets/css/pages/vivencias.css">
+    <link rel="stylesheet" href="../../assets/css/components/navbar.css">
+    <link rel="stylesheet" href="../../assets/css/components/footer.css">
 
 </head>
 <body>
+    <nav links-list class="navbar"></nav>
+    <script src="../../components/navbar.js"></script>
+    
+    
     <form>
         <h1>Título:</h1>
         <div id="posicaobloco">
-            <input id="larguratexto" type="text" placeholder="Título do seu post/vivência:">
+            <textarea placeholder="Título do seu post/vivência:" rows="1" style="width: 97%;" ></textarea>
         </div><br>
 
         <h1>Situação:</h1>
         <div id="posicaobloco">
-        <input id="larguratexto" style="padding-bottom: 10%;" type="text" placeholder="Escreva sobre sua situação aqui:">
+        <textarea placeholder="Escreva sobre sua situação aqui" rows="7" style="width: 97%;" ></textarea>
         </div><br>
         
         <h1>Solução:</h1>
         <div id="posicaobloco">
-        <input id="larguratexto" style="padding-bottom: 10%;" type="text" placeholder="Escreva aqui se o seu problema foi resolvido e como:">
+        <textarea placeholder="Escreva aqui se o seu problema foi resolvido e como" rows="7" style="width: 97%;" ></textarea>
         </div><br>
         <button style="margin-left: 87%; font-size: 80%;" >
             Enviar
         </button>
     </form>
+    <br>
+   <footer class="footer" profiles__list></footer>
+   <script src="../../components/footer.js"></script>
 </body>
 </html>
