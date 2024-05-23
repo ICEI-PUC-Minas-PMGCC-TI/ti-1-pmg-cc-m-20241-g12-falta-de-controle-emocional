@@ -1,3 +1,9 @@
+// Constantes
+const msg = document.getElementById("msg");
+const form_psi = document.getElementById("form_psi");
+const form_user = document.getElementById("form_user");
+const btn_psi = document.getElementById("btn_psi");
+
 // Usuário logado
 let user;
 
@@ -8,17 +14,12 @@ function get_status() {
 
 function check() {
    user = get_status();
-   if (user) {
-      token = true;
-   }
 }
 
 check();
 
 // Messagem
 function message(message, type) {
-   const msg = document.getElementById("msg");
-
    // Mostra a mensagem por 6s
    setTimeout(function () {
       msg.classList.add("none");
@@ -34,9 +35,6 @@ let btn_info = document.getElementById("state_info");
 let btn_publi = document.getElementById("state_publi");
 
 function info_page(page) {
-   const form_psi = document.getElementById("form_psi");
-   const form_user = document.getElementById("form_user");
-
    if (page == false) {
       form_psi.classList.add("none");
       form_user.classList.add("none");
@@ -71,10 +69,7 @@ async function is_psicologo() {
       const response = await fetch(URL_PSI);
       const psicologos = await response.json();
 
-      const psicologo = psicologos.find((p) => p.usuario === user.id);
-
-      const form_psi = document.getElementById("form_psi");
-      const btn_psi = document.getElementById("btn_psi");
+      psicologo = psicologos.find((p) => p.usuario === user.id);
 
       if (page) {
          form_psi.classList.remove("none");
@@ -95,8 +90,6 @@ async function is_psicologo() {
 // Muda como estará os forms
 function state_form(form) {
    const form_data = new FormData(form);
-
-   console.log(form_data);
 }
 
 // Passa para form_psi dados
@@ -133,7 +126,6 @@ function input_formuser(form, user) {
 
 document.addEventListener("DOMContentLoaded", is_psicologo);
 
-document.getElementById("btn_edit").addEventListener("click", state_form(form_user));
+document.getElementById("btn_edit").addEventListener("click", state_form(form_psi));
 
-const form_user = document.getElementById("form_user");
 input_formuser(form_user, user);

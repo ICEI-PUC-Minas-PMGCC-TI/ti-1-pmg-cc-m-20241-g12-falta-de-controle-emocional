@@ -14,13 +14,10 @@ function check() {
    user = get_status();
    if (user) {
       token = true;
-      console.log("Usuário está logado:", user);
    }
 }
 
 check();
-
-console.log("mostra aqui: ", user);
 
 // Mensagem na tela
 function message(message, type) {
@@ -90,6 +87,53 @@ async function registerPsicologo(event) {
       message("Erro ao cadastrar psicólogo", "error");
    }
 }
+
+// Passa para form_psi dados
+function input_formpsi(form, psicologo) {
+   const form_data = new FormData(form);
+
+   form_data.set("cpf", psicologo.cpf);
+   form_data.set("cepp", psicologo.cepp);
+   form_data.set("endereco", psicologo.endereco);
+   form_data.set("formacao", psicologo.formacao);
+
+   for (const [key, value] of form_data.entries()) {
+      const input = form.elements[key];
+      if (input) {
+         input.value = value;
+      }
+   }
+}
+
+// Pega o psicologo da url
+let info_psicologourl = new URLSearchParams(location.search);
+let id_psicologourl = info_psicologourl.get("id");
+
+// Cruds
+const URL_PSI__id = URL_PSI + "/" + id_psicologourl;
+console.log(URL_PSI__id);
+
+// Busca psicologo no perfil
+/*async function is_psicologo() {
+   try {
+      const response = await fetch(URL_PSI);
+      const psicologos = await response.json();
+
+      if (page) {
+         form_psi.classList.remove("none");
+      }
+      btn_psi.classList.add("none");
+      input_formpsi(form_psi, psicologo);
+
+      if (!psicologo) {
+         form_psi.classList.add("none");
+         btn_psi.classList.remove("none");
+      }
+   } catch (error) {
+      console.error("Erro ao fazer login:", error);
+      message("Erro ao fazer login", "error");
+   }
+}*/
 
 // Eventos de submissão dos formulários
 document.getElementById("form_psi").addEventListener("submit", registerPsicologo);
