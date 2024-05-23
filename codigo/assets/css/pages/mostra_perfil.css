@@ -1,0 +1,153 @@
+@media (min-width: 730px) {
+   .align__profile {
+      display: flex;
+      flex-direction: row;
+   }
+
+   .section__profile--left {
+      display: block;
+      padding: 0rem;
+   }
+
+   .section__profile--right {
+      width: 80%;
+      padding: 2rem;
+   }
+
+   .section__profile--right .btn_outline {
+      display: none;
+   }
+
+   .container__image--desktop {
+      display: none !important;
+   }
+
+   .list__btn {
+      padding: 0rem 0rem 1rem 0rem !important;
+   }
+
+   .list__btn--action {
+      flex-direction: column !important;
+   }
+
+   .btn_outline--action {
+      margin-bottom: 0.5rem !important;
+   }
+}
+
+@media (max-width: 730px) {
+   .section__profile--left {
+      display: none;
+   }
+}
+
+.section__profile--left {
+   width: 20%;
+}
+
+.list__btn {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   list-style: none;
+   margin: 0;
+   padding: 0;
+   width: auto;
+   padding: 1rem 0rem;
+}
+
+.list__btn--action {
+   padding: 0.5rem;
+}
+
+.item__btn {
+   width: 100%;
+}
+
+.item__btn--style {
+   width: 98%;
+   padding: 0.25rem 0.5rem;
+   border-radius: 0.25rem;
+   font-weight: 600;
+   background-color: #e2e2e2;
+   color: #b3b3b3 !important;
+}
+
+.item__btn--select {
+   background-color: transparent;
+   border: #b3b3b3 solid 1px;
+   color: #1e1e1e !important;
+}
+
+.form {
+   display: flex;
+   flex-direction: column;
+   height: auto;
+   padding: 1rem 0rem;
+   border-radius: 0.5rem;
+}
+
+.form__title {
+   font-weight: bold;
+   padding-bottom: 1rem;
+   text-align: center;
+}
+
+.form__label {
+   font-weight: bold;
+}
+
+.form__input {
+   margin-bottom: 1rem;
+   background-color: rgba(0, 0, 0, 0.02);
+   border: #1e1e1e59 solid 1px;
+   border-radius: 0.25rem;
+   padding: 0.25rem 0.25rem;
+}
+
+.form select {
+   margin: 0;
+}
+
+.container__image {
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding: 1rem 0rem;
+}
+
+.container__image__icon {
+   height: 9rem;
+   width: 9rem;
+   border-radius: 50%;
+   background-color: #b3b3b3;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.btn__cadpsi {
+   width: 100%;
+   display: flex;
+   align-items: center;
+   background-color: #2a63cf !important;
+   padding: 0.5rem 1.5rem;
+}
+
+.btn__cadpsi i {
+   color: #fff !important;
+   padding-right: 0.5rem;
+}
+
+.btn_outline--action {
+   width: 98%;
+   padding: 0.25rem 0.5rem;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.btn_outline--action i {
+   padding-right: 0.5rem;
+}

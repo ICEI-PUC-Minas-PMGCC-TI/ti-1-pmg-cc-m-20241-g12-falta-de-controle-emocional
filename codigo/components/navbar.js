@@ -68,7 +68,7 @@ const listLinks = (links) => {
 function auth(token) {
    if (token) {
       return `
-         <li class="item">Profile</li>
+         <a class="item" href="http://127.0.0.1:5500/modules/perfil/mostra_perfil.html"><p class="item--style">Perfil</p></a>
          <li><button id="btn_logout" class="item">Logout</button></li>
         `;
    }

@@ -47,6 +47,7 @@ button {
    border-radius: 0.25rem;
    border: none;
    padding: 0.25rem 1rem;
+   font-weight: 600;
 }
 
 .btn_primary:hover {
