@@ -2,6 +2,26 @@
 const URL_ATD = "http://localhost:3000/atendimentos";
 const URL_PSI = "http://localhost:3000/psicologos";
 
+let user;
+
+// usuario logado
+function get_status() {
+   const user = localStorage.getItem("status");
+   return user ? JSON.parse(user) : null;
+}
+
+function check() {
+   user = get_status();
+   if (user) {
+      token = true;
+      console.log("Usuário está logado:", user);
+   }
+}
+
+check();
+
+console.log("mostra aqui: ", user);
+
 // Mensagem na tela
 function message(message, type) {
    msg = document.getElementById("msg");
@@ -46,6 +66,7 @@ async function registerPsicologo(event) {
    const form = event.target;
    const formData = new FormData(form);
    const data = Object.fromEntries(formData);
+   data["usuario"] = user.id;
 
    const request = new Request(URL_PSI, {
       method: "POST",

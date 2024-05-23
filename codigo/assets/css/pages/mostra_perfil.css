@@ -30,6 +30,10 @@
       flex-direction: column !important;
    }
 
+   .section__profile--right .list__btn--action {
+      display: none !important;
+   }
+
    .btn_outline--action {
       margin-bottom: 0.5rem !important;
    }

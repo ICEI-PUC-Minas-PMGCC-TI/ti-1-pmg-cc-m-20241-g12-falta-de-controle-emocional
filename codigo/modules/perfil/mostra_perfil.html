@@ -22,7 +22,11 @@
 
     <nav links-list class="navbar"></nav>
 
-    <section class="section align__profile">
+    <div id="msg" class="message none">
+        <!--<div  class="sucess">Messagem</div>-->
+    </div>
+
+    <section class="section align__profile section__info">
         <section class="section section__profile--left">
             <div class="container__image">
                 <div class="container__image__icon">
@@ -32,7 +36,7 @@
 
             <ul class="list__btn list__btn--action">
                 <li class="item__btn">
-                    <button class="btn_outline btn_outline--action">
+                    <button class="btn_outline btn_outline--action" id="btn_edit">
                         <i class="fa-solid fa-pencil"></i>Editar
                     </button>
                 </li>
@@ -42,6 +46,8 @@
                     </button>
                 </li>
             </ul>
+
+
         </section>
 
         <section class="section section__profile--right">
@@ -49,8 +55,9 @@
                 <i class="fa-solid fa-arrow-left"></i>Voltar
             </button>
             <ul class="list__btn">
-                <li class="item__btn"><button class="item__btn--style item__btn--select">Info</button></li>
-                <li class="item__btn"><button class="item__btn--style ">Publicações</button></li>
+                <li class="item__btn"><button class="item__btn--style item__btn--select" id="state_info">Info</button>
+                </li>
+                <li class="item__btn"><button class="item__btn--style " id="state_publi">Publicações</button></li>
             </ul>
 
             <div class="container__image container__image--desktop">
@@ -60,15 +67,15 @@
             </div>
 
 
-            <form action="" class="form">
+            <form action="" class="form" id="form_user">
                 <label class="form__label" for="">Nome</label>
-                <input class="form__input" type="text" placeholder="Nome" name="name" required>
+                <input class="form__input" type="text" placeholder="Nome" name="nome" required disabled>
 
                 <label class="form__label" for="">Email</label>
-                <input class="form__input" type="email" placeholder="nome@email.com" name="email" required>
+                <input class="form__input" type="email" placeholder="nome@email.com" name="email" required disabled>
 
                 <label class="form__label" for="">Genêro</label>
-                <select class="form__input" name="genero">
+                <select class="form__input" name="genero" disabled>
                     <option value="" disabled selected>Escolha</option>
                     <option value="" disabled>Feminino</option>
                     <option value="" disabled>Masculino</option>
@@ -79,7 +86,7 @@
 
             <ul class="list__btn list__btn--action">
                 <li class="item__btn">
-                    <button class="btn_outline btn_outline--action">
+                    <button class="btn_outline btn_outline--action" id="btn_edit">
                         <i class="fa-solid fa-pencil"></i>Editar
                     </button>
                 </li>
@@ -90,27 +97,28 @@
                 </li>
             </ul>
 
-            <a class="btn_primary btn__cadpsi" href="http://127.0.0.1:5500/modules/psicologos/cadastro_psicologos.html">
+            <a class="btn_primary btn__cadpsi" id="btn_psi"
+                href="http://127.0.0.1:5500/modules/psicologos/cadastro_psicologos.html">
                 <i class="fa-solid fa-user"></i>
                 Cadastrar como psicólogo
             </a>
 
 
-            <form action="" method="POST" class="form" id="form_psi">
+            <form action="" method="POST" class="form none" id="form_psi">
                 <label class="form__label" for="">CPF:</label>
-                <input class="form__input" type="text" placeholder="000.000.000-00" name="cpf">
+                <input class="form__input" type="text" placeholder="000.000.000-00" name="cpf" disabled>
 
                 <label class="form__label" for="">CEPP:</label>
-                <input class="form__input" type="text" placeholder="00000-000" name="cepp">
+                <input class="form__input" type="text" placeholder="00000-000" name="cepp" disabled>
 
                 <label class="form__label" for="">Endereço:</label>
-                <input class="form__input" type="text" placeholder="Avenida Brasil" name="endereco">
+                <input class="form__input" type="text" placeholder="Avenida Brasil" name="endereco" disabled>
 
                 <label class="form__label" for="">Formação:</label>
-                <input class="form__input" type="text" placeholder="PUC Minas" name="formacao">
+                <input class="form__input" type="text" placeholder="PUC Minas" name="formacao" disabled>
 
                 <label class="form__label" for="">Atendimento</label>
-                <select class="form__input" id="select_atd" name="atendimento">
+                <select class="form__input" id="select_atd" name="atendimento" disabled>
                     <option value="" disabled selected>Escolha</option>
                 </select>
 
@@ -119,6 +127,7 @@
         </section>
     </section>
 
+    <script src="/assets/js/pages/mostra_perfil.js"></script>
     <script src="/components/navbar.js"></script>
 </body>
 
