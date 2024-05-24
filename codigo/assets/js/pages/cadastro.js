@@ -50,6 +50,7 @@ async function registraUsuario(event) {
       if (response.ok) {
          console.log("Usuário cadastrado com sucesso:", data);
          message("Usuário cadastrado com sucesso", "success");
+         window.location.replace("http://127.0.0.1:5500/index.html");
       } else {
          console.error("Erro ao cadastrar usuário:", response.statusText);
          message("Erro ao cadastrar usuário", "error");

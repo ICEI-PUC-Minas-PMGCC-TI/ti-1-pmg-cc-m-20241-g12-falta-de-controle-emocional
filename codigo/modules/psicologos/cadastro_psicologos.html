@@ -26,7 +26,7 @@
         <!--<div  class="sucess">Messagem</div>-->
     </div>
     <section class="section section__cad">
-        <button class="btn_outline">
+        <button class="btn_outline" onclick="history.back()">
             <i class="fa-solid fa-arrow-left"></i>Voltar
         </button>
 
@@ -34,19 +34,20 @@
         <form action="" method="POST" class="form" id="form_psi">
             <h3 class="form__title">Cadastro de Psicólogos</h3>
             <label class="form__label" for="">CPF:</label>
-            <input class="form__input" type="text" placeholder="000.000.000-00" name="cpf">
+            <input class="form__input" type="text" placeholder="000.000.000-00" name="cpf" minlength="11" maxlength="11"
+                required>
 
             <label class="form__label" for="">CEPP:</label>
-            <input class="form__input" type="text" placeholder="00000-000" name="cepp">
+            <input class="form__input" type="text" placeholder="00000-000" name="cepp" maxlength="8" required>
 
             <label class="form__label" for="">Endereço:</label>
-            <input class="form__input" type="text" placeholder="Avenida Brasil" name="endereco">
+            <input class="form__input" type="text" placeholder="Avenida Brasil" name="endereco" required>
 
             <label class="form__label" for="">Formação:</label>
-            <input class="form__input" type="text" placeholder="PUC Minas" name="formacao">
+            <input class="form__input" type="text" placeholder="PUC Minas" name="formacao" required>
 
             <label class="form__label" for="">Atendimento</label>
-            <select class="form__input" id="select_atd" name="atendimento">
+            <select class="form__input" id="select_atd" name="atendimento" required>
                 <option value="" disabled selected>Escolha</option>
             </select>
 

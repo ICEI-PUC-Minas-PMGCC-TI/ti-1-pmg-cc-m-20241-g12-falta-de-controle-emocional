@@ -1,11 +1,9 @@
-// URLs e Variáveis Globais
+// URLs
 const URL_ATD = "http://localhost:3000/atendimentos";
 const URL_PSI = "http://localhost:3000/psicologos";
-const URL_PSI__id = URL_PSI + "/" + new URLSearchParams(location.search).get("id");
-let user;
-let psi;
 
-console.log(URL_PSI__id);
+// Variaveis e elementos do dom
+let user;
 
 // Funções de Utilidade
 function message(message, type) {
@@ -28,12 +26,9 @@ function get_status() {
 
 function check() {
    user = get_status();
-   if (user) {
-      token = true;
-   }
 }
 
-// Funções de Manipulação de Formulários
+// Funções Assíncronas
 async function registerPsicologo(event) {
    event.preventDefault();
    const form = event.target;
@@ -52,6 +47,7 @@ async function registerPsicologo(event) {
       if (response.ok) {
          console.log("Psicólogo cadastrado com sucesso:", data);
          message("Psicólogo cadastrado com sucesso", "success");
+         window.location.replace("http://127.0.0.1:5500/modules/perfil/mostra_perfil.html");
       } else {
          console.error("Erro ao cadastrar psicólogo:", response.statusText);
          message("Erro ao cadastrar psicólogo", "error");
@@ -62,23 +58,8 @@ async function registerPsicologo(event) {
    }
 }
 
-function input_formpsi(form, psicologo) {
-   const form_data = new FormData(form);
-   form_data.set("cpf", psicologo.cpf);
-   form_data.set("cepp", psicologo.cepp);
-   form_data.set("endereco", psicologo.endereco);
-   form_data.set("formacao", psicologo.formacao);
-
-   for (const [key, value] of form_data.entries()) {
-      const input = form.elements[key];
-      if (input) {
-         input.value = value;
-      }
-   }
-}
-
 // Funções de Manipulação de Dados
-async function populateAtendimentos() {
+async function get_atendimentos() {
    const select = document.getElementById("select_atd");
 
    try {
@@ -95,33 +76,8 @@ async function populateAtendimentos() {
    }
 }
 
-// Eventos de submissão dos formulários
 document.getElementById("form_psi").addEventListener("submit", registerPsicologo);
 
 // Inicializaçoes
-populateAtendimentos();
+get_atendimentos();
 check();
-
-// Funções inativas
-/*
-async function is_psicologo() {
-   try {
-      const response = await fetch(URL_PSI);
-      const psicologos = await response.json();
-
-      if (page) {
-         form_psi.classList.remove("none");
-      }
-      btn_psi.classList.add("none");
-      input_formpsi(form_psi, psicologo);
-
-      if (!psicologo) {
-         form_psi.classList.add("none");
-         btn_psi.classList.remove("none");
-      }
-   } catch (error) {
-      console.error("Erro ao fazer login:", error);
-      message("Erro ao fazer login", "error");
-   }
-}
-*/

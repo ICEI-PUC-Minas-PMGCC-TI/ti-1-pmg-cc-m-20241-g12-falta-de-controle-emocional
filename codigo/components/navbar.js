@@ -10,7 +10,6 @@ function check() {
    const user = get_status();
    if (user) {
       token = true;
-      console.log("Usuário está logado:", user);
    }
 }
 
@@ -22,6 +21,7 @@ function logout() {
    sessionStorage.removeItem("status");
    token = false;
    location.reload();
+   window.location.replace("http://127.0.0.1:5500/index.html");
    alert("Logout realizado!");
 }
 
