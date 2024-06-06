@@ -7,7 +7,17 @@
       "senha": "123456"
     }
   ],
-  "psicologos": [],
+  "psicologos": [
+    {
+      "id": "e360",
+      "cpf": "158.163.766",
+      "cepp": "123456",
+      "endereco": "Avenida Trinta e Um de Março",
+      "formacao": "PUC MINAS",
+      "atendimento": "2",
+      "usuario": "0a7d01db-2b3a-44d1-8a20-574010363476"
+    }
+  ],
   "atendimentos": [
     {
       "id": "1",

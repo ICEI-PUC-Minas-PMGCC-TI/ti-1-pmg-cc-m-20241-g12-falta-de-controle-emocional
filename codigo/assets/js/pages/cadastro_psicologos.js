@@ -39,7 +39,7 @@ async function registerPsicologo(event) {
    const request = new Request(URL_PSI, {
       method: "POST",
       body: JSON.stringify(data),
-      headers: {"Content-Type": "application/json"},
+      headers: { "Content-Type": "application/json" },
    });
 
    try {
@@ -47,7 +47,7 @@ async function registerPsicologo(event) {
       if (response.ok) {
          console.log("Psicólogo cadastrado com sucesso:", data);
          message("Psicólogo cadastrado com sucesso", "success");
-         window.location.replace("http://127.0.0.1:5500/modules/perfil/mostra_perfil.html");
+         window.location.replace("/modules/perfil/mostra_perfil.html");
       } else {
          console.error("Erro ao cadastrar psicólogo:", response.statusText);
          message("Erro ao cadastrar psicólogo", "error");

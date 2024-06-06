@@ -49,7 +49,7 @@ async function loginUser(event) {
          console.log("Login bem-sucedido:", user);
          set_status(user);
          message("Login bem-sucedido", "success");
-         window.location.replace("http://127.0.0.1:5500/index.html");
+         window.location.replace("/index.html");
       } else {
          console.error("Erro ao fazer login: usuário ou senha incorretos");
          message("Erro ao fazer login: usuário ou senha incorretos", "error");

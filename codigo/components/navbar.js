@@ -21,7 +21,7 @@ function logout() {
    sessionStorage.removeItem("status");
    token = false;
    location.reload();
-   window.location.replace("http://127.0.0.1:5500/index.html");
+   window.location.replace("/index.html");
    alert("Logout realizado!");
 }
 
@@ -33,23 +33,23 @@ function myFunction() {
 const links = [
    {
       name: "Home",
-      link: "http://127.0.0.1:5500/index.html",
+      link: "/index.html",
    },
    {
       name: "Desabafos",
-      link: "http://127.0.0.1:5500/#",
+      link: "/#",
    },
    {
       name: "Conteúdo",
-      link: "http://127.0.0.1:5500/#",
+      link: "/#",
    },
    {
       name: "Psicólogos",
-      link: "http://127.0.0.1:5500/#",
+      link: "/modules/psicologos/mostra_psicologos.html",
    },
    {
       name: "Dicas",
-      link: "http://127.0.0.1:5500/#",
+      link: "/#",
    },
 ];
 
@@ -58,7 +58,7 @@ const listLinks = (links) => {
       .map((item) => {
          return `
         <li class="item">
-            <span>${item.name}</span>
+            <span><a href="${item.link}">${item.name}</a></span>
         </li>
       `;
       })
@@ -68,20 +68,20 @@ const listLinks = (links) => {
 function auth(token) {
    if (token) {
       return `
-         <a class="item" href="http://127.0.0.1:5500/modules/perfil/mostra_perfil.html"><p class="item--style">Perfil</p></a>
+         <a class="item" href="/modules/perfil/mostra_perfil.html"><p class="item--style">Perfil</p></a>
          <li><button id="btn_logout" class="item">Logout</button></li>
         `;
    }
 
    return `
-        <a class="item" href="http://127.0.0.1:5500/modules/login/entrar.html"><p class="item--style">Entrar</p></a>
-        <a class="item" href="http://127.0.0.1:5500/modules/login/cadastro.html"><p class="item--style">Cadastrar</p></a>
+        <a class="item" href="/modules/login/entrar.html"><p class="item--style">Entrar</p></a>
+        <a class="item" href="/modules/login/cadastro.html"><p class="item--style">Cadastrar</p></a>
     `;
 }
 
 function navbar(links) {
    return `
-        <div class="navbar__logo"><a href="http://127.0.0.1:5500/index.html">Harmonia</a></div>
+        <div class="navbar__logo"><a href="/index.html">Harmonia</a></div>
         <ul class="navbar__list">
             ${listLinks(links)}
         </ul>

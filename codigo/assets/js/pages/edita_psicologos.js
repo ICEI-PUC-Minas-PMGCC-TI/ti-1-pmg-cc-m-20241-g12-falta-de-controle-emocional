@@ -63,7 +63,7 @@ async function edita_psicologo(event) {
    const request = new Request(URL_PSI_API, {
       method: "PATCH",
       body: JSON.stringify(data),
-      headers: {"Content-Type": "application/json"},
+      headers: { "Content-Type": "application/json" },
    });
 
    try {
@@ -71,7 +71,7 @@ async function edita_psicologo(event) {
       if (response.ok) {
          console.log("Psicólogo editado com sucesso:", data);
          message("Psicólogo editado com sucesso", "success");
-         window.location.replace("http://127.0.0.1:5500/modules/perfil/mostra_perfil.html");
+         window.location.replace("/modules/perfil/mostra_perfil.html");
       } else {
          console.error("Erro ao editar psicólogo:", response.statusText);
          message("Erro ao editar psicólogo", "error");

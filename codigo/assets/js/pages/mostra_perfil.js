@@ -57,7 +57,7 @@ async function fetchData(url) {
 
 function set_psi_edit(psicologo) {
    const id = psicologo.id;
-   const URL_PSI__id = "http://127.0.0.1:5500/modules/psicologos/edita_psicologos.html" + "?id=" + id;
+   const URL_PSI__id = "/modules/psicologos/edita_psicologos.html" + "?id=" + id;
 
    btnPsi_edit.setAttribute("href", URL_PSI__id);
    btnPsi_editdesk.setAttribute("href", URL_PSI__id);
@@ -144,7 +144,7 @@ async function remove_psi(url, event) {
 
    const request = new Request(url, {
       method: "DELETE",
-      headers: {"Content-Type": "application/json"},
+      headers: { "Content-Type": "application/json" },
    });
 
    try {
