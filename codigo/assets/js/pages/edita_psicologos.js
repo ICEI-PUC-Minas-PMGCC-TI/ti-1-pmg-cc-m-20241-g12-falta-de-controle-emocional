@@ -49,7 +49,7 @@ async function get_psicologo() {
       input_formpsi(form, psicologo);
    } catch (error) {
       console.error("Erro ao buscar psicólogo:", error);
-      showMessage("Erro ao buscar psicólogo", "error");
+      message("Erro ao buscar psicólogo", "error");
    }
 }
 

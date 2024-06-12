@@ -32,7 +32,7 @@ function check() {
 }
 
 // Funções de Utilidade
-function showMessage(message, type) {
+function message(message, type) {
    msg.classList.remove("none");
    msg.innerHTML = `<div class="${type}">${message}</div>`;
    setTimeout(() => {
@@ -135,13 +135,11 @@ async function fetchPsicologo() {
       fillFormPsi(formPsi, psicologo);
    } catch (error) {
       console.error("Erro ao buscar psicólogo:", error);
-      showMessage("Erro ao buscar psicólogo", "error");
+      message("Erro ao buscar psicólogo", "error");
    }
 }
 
 async function remove_psi(url, event) {
-   console.log("entrou 2");
-
    const request = new Request(url, {
       method: "DELETE",
       headers: { "Content-Type": "application/json" },
