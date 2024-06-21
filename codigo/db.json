@@ -61,5 +61,23 @@
          "id": "3",
          "tipo": "Remoto"
       }
+   ],
+   "conteudos": [
+      {"categoria": "Meditação", "tema": "Respiração", "duracao": 2, "titulo": "Meditação Guiada para Respiração"},
+      {"categoria": "Meditação", "tema": "Autocompaixão", "duracao": 14, "titulo": "Práticas de Autocompaixão"},
+      {"categoria": "Meditação", "tema": "Gratidão", "duracao": 9, "titulo": "Exercícios de Gratidão"},
+      {"categoria": "Meditação", "tema": "Ansiedade", "duracao": 16, "titulo": "Redução de Ansiedade Através da Meditação"},
+      {"categoria": "Meditação", "tema": "Inadequação", "duracao": 15, "titulo": "Guiando a Mente para a Aceitação"},
+      {"categoria": "Meditação", "tema": "Ansiedade", "duracao": 7, "titulo": "Meditação para Reduzir a Ansiedade Diária"},
+      {"categoria": "Meditação", "tema": "Respiração", "duracao": 23, "titulo": "Sessão de Respiração Profunda"},
+      {"categoria": "Meditação", "tema": "Gratidão", "duracao": 11, "titulo": "Meditação Profunda de Gratidão"},
+      {"categoria": "Música", "tema": "Ondas", "duracao": 5, "titulo": "Sons de Ondas do Mar"},
+      {"categoria": "Música", "tema": "Chuva", "duracao": 17, "titulo": "Música Relaxante com Som de Chuva"},
+      {"categoria": "Música", "tema": "Floresta", "duracao": 15, "titulo": "Sinfonia da Floresta"},
+      {"categoria": "Música", "tema": "Fogueira", "duracao": 6, "titulo": "Noite ao Redor da Fogueira"},
+      {"categoria": "Música", "tema": "Piano", "duracao": 34, "titulo": "Melodias de Piano para Relaxar"},
+      {"categoria": "Música", "tema": "Chuva", "duracao": 4, "titulo": "Som de Chuva para Concentração"},
+      {"categoria": "Música", "tema": "Piano", "duracao": 8, "titulo": "Concerto de Piano para Relaxamento"},
+      {"categoria": "Música", "tema": "Floresta", "duracao": 41, "titulo": "Imersão Sonora na Floresta"}
    ]
 }
