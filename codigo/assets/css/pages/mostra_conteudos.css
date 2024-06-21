@@ -10,41 +10,127 @@ body {
    color: #333;
 }
 
-.container {
-   max-width: 1200px;
-   margin: 0 auto;
-   padding: 20px;
+@media (max-width: 768px) {
+   .search-bar {
+      width: 100%;
+   }
+
+   .search-input {
+      width: 100%;
+   }
+
+   .filters select {
+      width: 100%;
+      padding: 0.5rem 0.5rem;
+   }
+
+   .filters button {
+      width: 100%;
+   }
+
+   .filters button {
+      margin-bottom: 0;
+   }
+
+   .content-card {
+      width: calc(100% - 40px);
+   }
+
+   .modal-content {
+      width: 90%;
+   }
+
+   .header {
+      height: 20rem;
+   }
+
+   .header--overlay {
+      height: 20rem;
+      padding-bottom: 1.5rem;
+   }
+
+   .filters {
+      flex-wrap: wrap;
+   }
 }
 
-.header-container {
-   background-image: url("../images/serenidade.png");
-   background-size: cover;
-   background-position: center;
-   color: white;
-   padding: 40px 20px;
-   border-radius: 10px;
-   text-align: center;
-   margin-bottom: 20px;
+@media (min-width: 768px) {
+   .header {
+      height: 16rem;
+   }
+
+   .header--overlay {
+      height: 16rem;
+   }
+
+   .header__title {
+      width: 80%;
+      text-align: center;
+   }
+
+   .header__group {
+      width: 80% !important;
+   }
+
+   .search-bar {
+      width: 100%;
+   }
+
+   .search-input {
+      width: 70%;
+   }
+
+   .filters select {
+      width: 100%;
+      padding: 0rem 0.5rem;
+   }
+}
+
+.header {
+   color: #fff !important;
+   display: flex;
+   justify-content: center;
+}
+
+.header__img {
+   object-fit: cover;
+   filter: brightness(45%);
+   height: 100%;
+   width: 100%;
+}
+
+.header--overlay {
+   position: absolute;
+   width: 100%;
    display: flex;
    flex-direction: column;
+   justify-content: center;
    align-items: center;
+   padding: 3rem;
 }
 
-.header-content {
-   padding: 20px;
-   border-radius: 10px;
-   display: inline-block;
+.header__title {
+   color: #fff !important;
+   font-weight: 900;
+}
+
+.header__input {
+   background-color: rgba(255, 255, 255, 0.233) !important;
+   color: #fff !important;
+}
+
+.header__input::placeholder {
+   color: #fff !important;
+   font-size: small;
 }
 
 .favorites-button {
-   background-color: rgba(74, 78, 38, 0.7);
-   color: #fff;
-   border: none;
+   background-color: #22478e;
+   color: #fff !important;
    padding: 8px 16px;
    border-radius: 5px;
    cursor: pointer;
-   margin-bottom: 20px;
-   font-size: 0.9em;
+   font-size: 0.8rem;
    display: flex;
    align-items: center;
    gap: 8px;
@@ -52,62 +138,58 @@ body {
 
 .favorites-button i {
    font-size: 1em;
+   color: #fff !important;
 }
 
 .favorites-button:hover {
-   background-color: rgba(59, 61, 31, 0.7);
-}
-
-.search-bar,
-.filters {
-   padding: 10px;
-   border-radius: 5px;
-   margin-bottom: 20px;
-   display: flex;
-   justify-content: center;
-   gap: 10px;
-   flex-wrap: wrap;
+   background-color: #061f4e;
 }
 
 .search-bar {
-   margin-top: 20px;
    display: flex;
    justify-content: center;
-   width: 100%;
 }
 
-.search-bar input {
-   width: 300px;
-   padding: 10px;
-   border: 1px solid #ccc;
-   border-radius: 5px;
-   background: rgba(255, 255, 255, 0.8);
-   color: #333;
+.search-input {
+   background-color: rgba(255, 255, 255, 0.233) !important;
+   color: #fff !important;
+}
+
+.search-input::placeholder {
+   color: #fff !important;
+   font-size: small;
 }
 
 .filters {
+   padding: 1rem 0rem;
    display: flex;
    justify-content: center;
    width: 100%;
+   gap: 10px;
 }
 
-.filters select,
-.filters button {
-   padding: 10px;
-   border: 1px solid #ccc;
-   border-radius: 5px;
-   background-color: rgba(255, 255, 255, 0.8);
+.filters select {
+   background-color: rgba(255, 255, 255, 0.233) !important;
+   color: #fff !important;
+   border-radius: 0.25rem;
+   border: 1px solid #fff;
+   font-size: small;
    cursor: pointer;
-   color: #333;
 }
 
 .filters button {
-   background-color: rgba(220, 53, 69, 0.8);
+   background-color: #22478e;
    color: #fff;
+   padding: 0.25rem 1rem;
+   border-radius: 0.25rem;
+}
+
+.filters button i {
+   color: #fff !important;
 }
 
 .filters button:hover {
-   background-color: rgba(200, 35, 51, 0.8);
+   background-color: #132d5f;
 }
 
 #contentDisplay {
@@ -185,12 +267,6 @@ body {
    margin-bottom: 20px;
 }
 
-#favoritesDisplay {
-   display: flex;
-   flex-wrap: wrap;
-   gap: 20px;
-}
-
 .close {
    color: #aaa;
    float: right;
@@ -205,39 +281,8 @@ body {
    cursor: pointer;
 }
 
-@media (max-width: 768px) {
-   .container {
-      padding: 10px;
-   }
-
-   header h1 {
-      font-size: 2em;
-   }
-
-   .search-bar input {
-      width: 200px;
-   }
-
-   .filters {
-      flex-direction: column;
-      align-items: stretch;
-   }
-
-   .filters select,
-   .filters button {
-      width: 100%;
-      margin-bottom: 10px;
-   }
-
-   .filters button {
-      margin-bottom: 0;
-   }
-
-   .content-card {
-      width: calc(100% - 40px);
-   }
-
-   .modal-content {
-      width: 90%;
-   }
+#favoritesDisplay {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 20px;
 }
