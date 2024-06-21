@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conteúdos</title>
+    <link rel="stylesheet" href="/assets/css/pages/mostra_conteudos.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="header-container">
+            <header>
+                <div class="header-content"></div>
+            </header>
+
+            <div class="search-bar">
+                <input type="text" id="searchText" placeholder="Pesquisa" />
+            </div>
+
+            <div class="filters">
+                <select id="categoryFilter">
+                    <option value="">Categoria</option>
+                    <option value="Meditação">Meditação</option>
+                    <option value="Música">Música</option>
+                </select>
+
+                <select id="themeFilter">
+                    <option value="">Tema</option>
+                </select>
+
+                <select id="durationFilter">
+                    <option value="">Duração</option>
+                    <option value="0-5">0-5 min</option>
+                    <option value="5-10">5-10 min</option>
+                    <option value="10-20">10-20 min</option>
+                    <option value="20+">20+ min</option>
+                </select>
+
+                <button id="clearFiltersButton">
+                    <i class="fa-solid fa-broom"></i>
+                </button>
+            </div>
+
+            <button id="favoritesButton" class="favorites-button">
+                <i class="fa-solid fa-bookmark"></i> Favoritos
+            </button>
+        </div>
+
+        <div id="contentDisplay"></div>
+    </div>
+
+    <div id="favoritesModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Favoritos</h2>
+            <div id="favoritesDisplay"></div>
+        </div>
+    </div>
+
+    <script src="/assets/js/pages/mostra_conteudos.js"></script>
+</body>
+
+</html>
