@@ -9,17 +9,12 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('themeFilter').addEventListener('change', applyFilters);
     document.getElementById('durationFilter').addEventListener('change', applyFilters);
     document.getElementById('clearFiltersButton').addEventListener('click', clearFilters);
-    document.getElementById('favoritesButton').addEventListener('click', openFavoritesModal);
-    document.querySelector('.modal .close').addEventListener('click', closeFavoritesModal);
-    window.addEventListener('click', (event) => {
-        if (event.target === document.getElementById('favoritesModal')) {
-            closeFavoritesModal();
-        }
-    });
 
     updateThemes();
 });
 
+
+// Faz a chamada da url | todos | pesquisa | filtro
 function loadContent() {
     fetch('http://localhost:3000/conteudos')
         .then(response => response.json())
@@ -27,27 +22,40 @@ function loadContent() {
         .catch(error => console.error('Error fetching data:', error));
 }
 
-function displayContent(data) {
-    const contentDisplay = document.getElementById('contentDisplay');
-    contentDisplay.innerHTML = '';
-    const favorites = getFavorites();
-    data.forEach(item => {
-        const card = document.createElement('div');
-        card.classList.add('content-card');
-        const isFavorited = favorites.includes(item.id);
-        card.innerHTML = `
-            <h3>${item.titulo}</h3>
-            <p>Categoria: ${item.categoria}</p>
-            <p>Tema: ${item.tema}</p>
-            <p>Duração: ${item.duracao} min</p>
-            <i class="fa-solid fa-bookmark favorite-icon ${isFavorited ? 'favorited' : ''}" data-id="${item.id}"></i>
-        `;
-        contentDisplay.appendChild(card);
+// Mostra os dados
+async function displayContent(data) {
+    try {
+        const response_fav = await fetch("http://localhost:3000/favoritos");
+        const favoritos = await response_fav.json();
 
-        card.querySelector('.favorite-icon').addEventListener('click', toggleFavorite);
-    });
+        const contentDisplay = document.getElementById('contentDisplay');
+        contentDisplay.innerHTML = '';
+
+        data.forEach(item => {
+            const favorito = favoritos.find((fav) => fav.id_favoritos === item.id);
+            let isFavorited = false;
+            if (favorito) {
+                isFavorited = true;
+            }
+            const card = document.createElement('div');
+            card.classList.add('content-card');
+            card.innerHTML = `
+                <h3>${item.titulo}</h3>
+                <p>Categoria: ${item.categoria}</p>
+                <p>Tema: ${item.tema}</p>
+                <p>Duração: ${item.duracao} min</p>
+                <i class="fa-solid fa-bookmark favorite-icon ${isFavorited ? 'favorited' : ''}" data-id="${item.id}"></i>
+            `;
+            contentDisplay.appendChild(card);
+
+            card.querySelector('.favorite-icon').addEventListener('click', toggleFavorite);
+        });
+    } catch (error) {
+        console.log(error);
+    }
 }
 
+// Realiza a pesquisa
 function performSearch() {
     const searchText = document.getElementById('searchText').value.toLowerCase();
     fetch('http://localhost:3000/conteudos')
@@ -61,6 +69,8 @@ function performSearch() {
         .catch(error => console.error('Error fetching data:', error));
 }
 
+
+// Aplica os filtros
 function applyFilters() {
     const categoryFilter = document.getElementById('categoryFilter').value;
     const themeFilter = document.getElementById('themeFilter').value;
@@ -92,6 +102,8 @@ function applyFilters() {
         .catch(error => console.error('Error fetching data:', error));
 }
 
+
+// Limpa os filtros
 function clearFilters() {
     document.getElementById('categoryFilter').value = '';
     document.getElementById('themeFilter').value = '';
@@ -101,6 +113,7 @@ function clearFilters() {
     updateThemes();
 }
 
+// Nome dos filtros
 function updateThemes() {
     const categoryFilter = document.getElementById('categoryFilter').value;
     const themeFilter = document.getElementById('themeFilter');
@@ -138,78 +151,85 @@ function updateThemes() {
     });
 }
 
-function getFavorites() {
-    const favorites = localStorage.getItem('favorites');
-    return favorites ? JSON.parse(favorites) : [];
+// Pega os favoritos
+async function getFavorites() {
+    try {
+        const response = await fetch("http://localhost:3000/favoritos");
+        const response_json = await response.json();
+
+        return response_json;
+
+    } catch (error) {
+        console.error("Não foi possível acessar seus favoritos");
+    }
 }
 
-function saveFavorites(favorites) {
-    localStorage.setItem('favorites', JSON.stringify(favorites));
-}
-
+// Muda favoritos
 function toggleFavorite(event) {
     const icon = event.target;
     const contentId = icon.getAttribute('data-id');
-    let favorites = getFavorites();
 
-    if (favorites.includes(contentId)) {
-        favorites = favorites.filter(id => id !== contentId);
-        icon.classList.remove('favorited');
-    } else {
-        favorites.push(contentId);
-        icon.classList.add('favorited');
-    }
+    getFavorites().then(favorites => {
+        const favorito = favorites.find((fav) => fav.id_favoritos === contentId);
 
-    saveFavorites(favorites);
-
-    updateFavoritesModal();
-
-    const contentDisplayIcons = document.querySelectorAll('#contentDisplay .favorite-icon');
-    contentDisplayIcons.forEach(icon => {
-        const contentId = icon.getAttribute('data-id');
-        if (favorites.includes(contentId)) {
-            icon.classList.add('favorited');
+        if (favorito) {
+            remove_fav(favorito.id);
         } else {
-            icon.classList.remove('favorited');
+            saveFavorites(contentId)
         }
     });
 }
 
-function openFavoritesModal() {
-    updateFavoritesModal();
-    const modal = document.getElementById('favoritesModal');
-    modal.style.display = 'block';
+
+// Salva favoritos
+async function saveFavorites(id) {
+    const data = {
+        "id_favoritos": id
+    }
+
+    const request = new Request("http://localhost:3000/favoritos", {
+        method: "POST",
+        body: JSON.stringify(data),
+        headers: { "Content-Type": "application/json" },
+    });
+
+
+    try {
+        const response = await fetch(request);
+        if (response.ok) {
+            console.log("Favorito cadastrado com sucesso:", data);
+            //message("Favorito cadastrado com sucesso", "success");
+        } else {
+            console.error("Erro ao cadastrar favorito:", response.statusText);
+            //message("Erro ao cadastrar favorito", "error");
+        }
+    } catch (error) {
+        console.error("Erro ao cadastrar novo favorito:", error);
+        //message("Erro ao cadastrar favorito", "error");
+    }
 }
 
-function closeFavoritesModal() {
-    const modal = document.getElementById('favoritesModal');
-    modal.style.display = 'none';
-}
 
-function updateFavoritesModal() {
-    const favoritesDisplay = document.getElementById('favoritesDisplay');
-    const favorites = getFavorites();
+// Deleta favoritos
+async function remove_fav(id) {
+    const url = "http://localhost:3000/favoritos/" + id;
 
-    fetch('http://localhost:3000/conteudos')
-        .then(response => response.json())
-        .then(data => {
-            const favoriteItems = data.filter(item => favorites.includes(item.id));
-            favoritesDisplay.innerHTML = '';
+    const request = new Request(url, {
+        method: "DELETE",
+        headers: { "Content-Type": "application/json" },
+    });
 
-            favoriteItems.forEach(item => {
-                const card = document.createElement('div');
-                card.classList.add('content-card');
-                card.innerHTML = `
-                    <h3>${item.titulo}</h3>
-                    <p>Categoria: ${item.categoria}</p>
-                    <p>Tema: ${item.tema}</p>
-                    <p>Duração: ${item.duracao} min</p>
-                    <i class="fa-solid fa-bookmark favorite-icon favorited" data-id="${item.id}"></i>
-                `;
-                favoritesDisplay.appendChild(card);
-
-                card.querySelector('.favorite-icon').addEventListener('click', toggleFavorite);
-            });
-        })
-        .catch(error => console.error('Error fetching data:', error));
+    try {
+        const response = await fetch(request);
+        if (response.ok) {
+            console.log("Favorito removido com sucesso:", data);
+            //message("Psicólogo removido com sucesso", "success");
+        } else {
+            console.error("Erro ao remover favorito:", response.statusText);
+            //message("Erro ao remover psicólogo", "error");
+        }
+    } catch (error) {
+        console.error("Erro ao remover favorito:", error);
+        //message("Erro ao remover psicólogo", "error");
+    }
 }

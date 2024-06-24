@@ -47,7 +47,7 @@
                 </li>
             </ul>
 
-            <hr>
+            <hr class="list__btn--action">
 
             <ul class="list__btn list__btn--action">
                 <li class="item__btn">
@@ -65,7 +65,7 @@
 
         </section>
 
-        <section class="section section__profile--right">
+        <section class="section section--right">
             <button class="btn_outline" onclick="history.back()">
                 <i class="fa-solid fa-arrow-left"></i>Voltar
             </button>
@@ -73,6 +73,7 @@
                 <li class="item__btn"><button class="item__btn--style item__btn--select" id="state_info">Info</button>
                 </li>
                 <li class="item__btn"><button class="item__btn--style " id="state_publi">Publicações</button></li>
+                <li class="item__btn"><button class="item__btn--style " id="state_fav">Favoritos</button></li>
             </ul>
 
             <div class="container__image container__image--desktop">
@@ -82,76 +83,84 @@
             </div>
 
 
-            <form action="" class="form" id="form_user">
-                <label class="form__label" for="">Nome</label>
-                <input class="form__input" type="text" placeholder="Nome" name="nome" required disabled>
+            <div id="info">
+                <form action="" class="form" id="form_user">
+                    <label class="form__label" for="">Nome</label>
+                    <input class="form__input" type="text" placeholder="Nome" name="nome" required disabled>
 
-                <label class="form__label" for="">Email</label>
-                <input class="form__input" type="email" placeholder="nome@email.com" name="email" required disabled>
+                    <label class="form__label" for="">Email</label>
+                    <input class="form__input" type="email" placeholder="nome@email.com" name="email" required disabled>
 
-                <label class="form__label" for="">Genêro</label>
-                <select class="form__input" name="genero" disabled>
-                    <option value="" disabled selected>Escolha</option>
-                    <option value="" disabled>Feminino</option>
-                    <option value="" disabled>Masculino</option>
-                    <option value="" disabled>Prefiro não informar</option>
+                    <label class="form__label" for="">Genêro</label>
+                    <select class="form__input" name="genero" disabled>
+                        <option value="" disabled selected>Escolha</option>
+                        <option value="" disabled>Feminino</option>
+                        <option value="" disabled>Masculino</option>
+                        <option value="" disabled>Prefiro não informar</option>
 
-                </select>
-            </form>
+                    </select>
+                </form>
 
-            <ul class="list__btn list__btn--action">
-                <li class="item__btn">
-                    <button class="btn_outline btn_outline--action" id="btn_edit">
-                        <i class="fa-solid fa-pencil"></i>Editar Usuário
-                    </button>
-                </li>
-                <li class="item__btn">
-                    <button class="btn_outline btn_outline--action">
-                        <i class="fa-solid fa-trash"></i>Excluir Usuário
-                    </button>
-                </li>
-            </ul>
+                <ul class="list__btn list__btn--action">
+                    <li class="item__btn">
+                        <button class="btn_outline btn_outline--action" id="btn_edit">
+                            <i class="fa-solid fa-pencil"></i>Editar Usuário
+                        </button>
+                    </li>
+                    <li class="item__btn">
+                        <button class="btn_outline btn_outline--action">
+                            <i class="fa-solid fa-trash"></i>Excluir Usuário
+                        </button>
+                    </li>
+                </ul>
 
-            <a class="btn_primary btn__cadpsi" id="btn_psi" href="/modules/psicologos/cadastro_psicologos.html">
-                <i class="fa-solid fa-user"></i>
-                Cadastrar como psicólogo
-            </a>
-
-
-            <form action="" method="POST" class="form none" id="form_psi">
-                <label class="form__label" for="">CPF:</label>
-                <input class="form__input" type="text" placeholder="000.000.000-00" name="cpf" disabled>
-
-                <label class="form__label" for="">CEPP:</label>
-                <input class="form__input" type="text" placeholder="00000-000" name="cepp" disabled>
-
-                <label class="form__label" for="">Endereço:</label>
-                <input class="form__input" type="text" placeholder="Avenida Brasil" name="endereco" disabled>
-
-                <label class="form__label" for="">Formação:</label>
-                <input class="form__input" type="text" placeholder="PUC Minas" name="formacao" disabled>
-
-                <label class="form__label" for="">Atendimento</label>
-                <select class="form__input" id="select_atd" name="atendimento" disabled>
-                    <option value="" disabled selected>Escolha</option>
-                </select>
-
-            </form>
-
-            <ul class="list__btn list__btn--action" id="btn_action--mob">
-                <li class="item__btn">
-                    <a href="" class="btn_outline btn_outline--action" id="btn_psi_edit">
-                        <i class="fa-solid fa-pencil"></i>Editar Psicólogo
-                    </a>
-                </li>
-                <li class="item__btn">
-                    <a href="" class="btn_outline btn_outline--action" id="btn_psi_remove">
-                        <i class="fa-solid fa-trash"></i>Excluir Psicólogo
-                    </a>
-                </li>
-            </ul>
+                <a class="btn_primary btn__cadpsi" id="btn_psi" href="/modules/psicologos/cadastro_psicologos.html">
+                    <i class="fa-solid fa-user"></i>
+                    Cadastrar como psicólogo
+                </a>
 
 
+                <form action="" method="POST" class="form none" id="form_psi">
+                    <label class="form__label" for="">CPF:</label>
+                    <input class="form__input" type="text" placeholder="000.000.000-00" name="cpf" disabled>
+
+                    <label class="form__label" for="">CEPP:</label>
+                    <input class="form__input" type="text" placeholder="00000-000" name="cepp" disabled>
+
+                    <label class="form__label" for="">Endereço:</label>
+                    <input class="form__input" type="text" placeholder="Avenida Brasil" name="endereco" disabled>
+
+                    <label class="form__label" for="">Formação:</label>
+                    <input class="form__input" type="text" placeholder="PUC Minas" name="formacao" disabled>
+
+                    <label class="form__label" for="">Atendimento</label>
+                    <select class="form__input" id="select_atd" name="atendimento" disabled>
+                        <option value="" disabled selected>Escolha</option>
+                    </select>
+
+                </form>
+
+                <ul class="list__btn list__btn--action" id="btn_action--mob">
+                    <li class="item__btn">
+                        <a href="" class="btn_outline btn_outline--action" id="btn_psi_edit">
+                            <i class="fa-solid fa-pencil"></i>Editar Psicólogo
+                        </a>
+                    </li>
+                    <li class="item__btn">
+                        <a href="" class="btn_outline btn_outline--action" id="btn_psi_remove">
+                            <i class="fa-solid fa-trash"></i>Excluir Psicólogo
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div id="publi">
+                Publicações
+            </div>
+
+            <div id="cont">
+                <div id="contentDisplay"></div>
+            </div>
         </section>
     </section>
 

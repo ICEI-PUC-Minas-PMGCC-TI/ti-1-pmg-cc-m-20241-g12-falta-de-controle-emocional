@@ -76,10 +76,18 @@
 }
 
 .card__psic {
-   border: 1px #1e1e1e solid;
    width: 100%;
    padding: 1rem 1rem;
    margin-bottom: 1rem;
+   position: relative;
+   border: 1px solid #ddd;
+   border-radius: 5px;
+   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+   transition: transform 0.2s;
+}
+
+.card__psic:hover {
+   transform: translateY(-5px);
 }
 
 .card__title {

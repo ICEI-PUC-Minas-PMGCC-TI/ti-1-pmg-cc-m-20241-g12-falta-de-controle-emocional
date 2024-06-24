@@ -9,12 +9,12 @@
       padding: 0rem;
    }
 
-   .section__profile--right {
+   .section--right {
       width: 80%;
       padding: 2rem;
    }
 
-   .section__profile--right .btn_outline {
+   .section--right .btn_outline {
       display: none;
    }
 
@@ -30,7 +30,7 @@
       flex-direction: column !important;
    }
 
-   .section__profile--right .list__btn--action {
+   .section--right .list__btn--action {
       display: none !important;
    }
 
@@ -154,4 +154,47 @@
 
 .btn_outline--action i {
    padding-right: 0.5rem;
+}
+
+.content-card {
+   position: relative;
+   background-color: #fff;
+   border: 1px solid #ddd;
+   border-radius: 5px;
+   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+   padding: 20px;
+   padding-top: 40px;
+   width: 100%;
+   transition: transform 0.2s;
+   margin-bottom: 1rem;
+}
+
+.content-card h3 {
+   font-size: 1.5em;
+   margin-bottom: 10px;
+   color: #333;
+}
+
+.content-card p {
+   margin-bottom: 10px;
+   font-size: 1em;
+   color: #666;
+}
+
+.content-card:hover {
+   transform: translateY(-5px);
+}
+
+.favorite-icon {
+   position: absolute;
+   top: 10px;
+   right: 10px;
+   cursor: pointer;
+   font-size: 1.5em;
+   color: #000000a4 !important;
+   transition: color 0.3s;
+}
+
+.favorite-icon.favorited {
+   color: #85a6e5 !important;
 }
