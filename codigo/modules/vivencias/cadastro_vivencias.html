@@ -4,7 +4,7 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sua vivência</title>
-    <link rel="stylesheet" href="/assets/css/pages/vivencias.css">
+    <link rel="stylesheet" href="/assets/css/pages/cadastro_vivencias.css">
     <link rel="stylesheet" href="/assets/css/components/navbar.css">
     <link rel="stylesheet" href="/assets/css/components/footer.css">
     <link rel="stylesheet" href="/assets/css/style.css">
@@ -15,28 +15,32 @@
 
 <body>
     <nav links-list class="navbar"></nav>
-    <form>
-        <h1>Título:</h1>
-        <div id="posicaobloco">
-            <textarea placeholder="Título do seu post/vivência:" rows="1" style="width: 97%;"></textarea>
-        </div><br>
+    <div id="msg" class="message none">
+        <!--<div  class="sucess">Messagem</div>-->
+    </div>
 
-        <h1>Situação:</h1>
-        <div id="posicaobloco">
-            <textarea placeholder="Escreva sobre sua situação aqui" rows="7" style="width: 97%;"></textarea>
-        </div><br>
-
-        <h1>Solução:</h1>
-        <div id="posicaobloco">
-            <textarea placeholder="Escreva aqui se o seu problema foi resolvido e como" rows="7"
-                style="width: 97%;"></textarea>
-        </div><br>
-        <button style="margin-left: 87%; font-size: 80%;">
-            Enviar
+    <section class="section section__cad">
+        <button class="btn_outline" onclick="history.back()">
+            <i class="fa-solid fa-arrow-left"></i>Voltar
         </button>
-    </form>
-    <br>
+
+        <form action="" method="POST" class="form" id="form_vive">
+            <h3 class="form__title">Cadastro de Vivência</h3>
+            <label class="form__label" for="">Titulo:</label>
+            <input class="form__input" type="text" placeholder="Titulo da Postagens" name="titulo" required>
+
+            <label class="form__label" for="">Situação:</label>
+            <input class="form__input" type="text" placeholder="O que ocorreu?" name="situacao" required>
+
+            <label class="form__label" for="">Solução:</label>
+            <input class="form__input" type="text" placeholder="Como se resolveu?" name="solucao" required>
+
+            <button class="btn_primary" type="submit">Salvar</button>
+        </form>
+    </section>
+
     <footer class="footer" profiles__list></footer>
+    <script src="/assets/js/pages/cadastro_vivencias.js"></script>
     <script src="/components/footer.js"></script>
     <script src="/components/navbar.js"></script>
 </body>
