@@ -1,216 +1,212 @@
 {
-   "usuarios": [
-      {
-         "id": "0a7d01db-2b3a-44d1-8a20-574010363476",
-         "nome": "Mariana Almeida Mendonça",
-         "email": "marianaalmeidafga@gmail.com",
-         "senha": "123456"
-      },
-      {
-         "id": "0b5b0e3e-0d2d-42a8-b871-013616005517",
-         "nome": "Lívia Lima",
-         "email": "livialima@gmail.com",
-         "senha": "123456"
-      },
-      {
-         "id": "b5b01a0f-6a7d-44e5-a233-532226464010",
-         "nome": "Daniela Almeida",
-         "email": "danialmeida@gmail.com",
-         "senha": "123456"
-      }
-   ],
-   "psicologos": [
-      {
-         "id": "55fb",
-         "cpf": "45456456679",
-         "cepp": "43678645",
-         "endereco": "Avenida Abílio Machado, 915",
-         "formacao": "Unifor",
-         "atendimento": "3",
-         "usuario": "b5b01a0f-6a7d-44e5-a233-532226464010"
-      },
-      {
-         "id": "3cd9",
-         "cpf": "14527899999",
-         "cepp": "44775447",
-         "endereco": "Rua Conceição do Mato Dentro",
-         "formacao": "UFMG ",
-         "atendimento": "1",
-         "usuario": "0b5b0e3e-0d2d-42a8-b871-013616005517"
-      },
-      {
-         "id": "9e2f",
-         "cpf": "158.163.766",
-         "cepp": "21154262",
-         "endereco": "Avenida Trinta e Um de Março",
-         "formacao": "PUC MINAS",
-         "atendimento": "2",
-         "usuario": "0a7d01db-2b3a-44d1-8a20-574010363476"
-      }
-   ],
-   "atendimentos": [
-      {
-         "id": "1",
-         "tipo": "Presencial"
-      },
-      {
-         "id": "2",
-         "tipo": "Híbrido"
-      },
-      {
-         "id": "3",
-         "tipo": "Remoto"
-      }
-   ],
-   "conteudos": [
-      {
-         "categoria": "Meditação",
-         "tema": "Respiração",
-         "duracao": 2,
-         "titulo": "Meditação Guiada para Respiração",
-         "id": "1665"
-      },
-      {
-         "categoria": "Meditação",
-         "tema": "Autocompaixão",
-         "duracao": 14,
-         "titulo": "Práticas de Autocompaixão",
-         "id": "2f38"
-      },
-      {
-         "categoria": "Meditação",
-         "tema": "Gratidão",
-         "duracao": 9,
-         "titulo": "Exercícios de Gratidão",
-         "id": "aa82"
-      },
-      {
-         "categoria": "Meditação",
-         "tema": "Ansiedade",
-         "duracao": 16,
-         "titulo": "Redução de Ansiedade Através da Meditação",
-         "id": "5dfd"
-      },
-      {
-         "categoria": "Meditação",
-         "tema": "Inadequação",
-         "duracao": 15,
-         "titulo": "Guiando a Mente para a Aceitação",
-         "id": "3406"
-      },
-      {
-         "categoria": "Meditação",
-         "tema": "Ansiedade",
-         "duracao": 7,
-         "titulo": "Meditação para Reduzir a Ansiedade Diária",
-         "id": "6902"
-      },
-      {
-         "categoria": "Meditação",
-         "tema": "Respiração",
-         "duracao": 23,
-         "titulo": "Sessão de Respiração Profunda",
-         "id": "7a5a"
-      },
-      {
-         "categoria": "Meditação",
-         "tema": "Gratidão",
-         "duracao": 11,
-         "titulo": "Meditação Profunda de Gratidão",
-         "id": "51ee"
-      },
-      {
-         "categoria": "Música",
-         "tema": "Ondas",
-         "duracao": 5,
-         "titulo": "Sons de Ondas do Mar",
-         "id": "9aad"
-      },
-      {
-         "categoria": "Música",
-         "tema": "Chuva",
-         "duracao": 17,
-         "titulo": "Música Relaxante com Som de Chuva",
-         "id": "7d0b"
-      },
-      {
-         "categoria": "Música",
-         "tema": "Floresta",
-         "duracao": 15,
-         "titulo": "Sinfonia da Floresta",
-         "id": "86dd"
-      },
-      {
-         "categoria": "Música",
-         "tema": "Fogueira",
-         "duracao": 6,
-         "titulo": "Noite ao Redor da Fogueira",
-         "id": "bff6"
-      },
-      {
-         "categoria": "Música",
-         "tema": "Piano",
-         "duracao": 34,
-         "titulo": "Melodias de Piano para Relaxar",
-         "id": "6255"
-      },
-      {
-         "categoria": "Música",
-         "tema": "Chuva",
-         "duracao": 4,
-         "titulo": "Som de Chuva para Concentração",
-         "id": "b678"
-      },
-      {
-         "categoria": "Música",
-         "tema": "Piano",
-         "duracao": 8,
-         "titulo": "Concerto de Piano para Relaxamento",
-         "id": "1cdf"
-      },
-      {
-         "categoria": "Música",
-         "tema": "Floresta",
-         "duracao": 41,
-         "titulo": "Imersão Sonora na Floresta",
-         "id": "4354"
-      }
-   ],
-   "favoritos": [
-      {
-         "id": "92a6",
-         "id_favoritos": "aa82"
-      },
-      {
-         "id": "c1b9",
-         "id_favoritos": "5dfd"
-      },
-      {
-         "id": "480b",
-         "id_favoritos": "1665"
-      }
-   ],
-   "vivencias": [
-      {
-         "id": "45cb",
-         "titulo": "O titulo da postagem",
-         "situacao": "Eu fiquei triste",
-         "solucao": "Parei de ficar triste",
-         "usuario": "0a7d01db-2b3a-44d1-8a20-574010363476"
-      },
-      {
-         "id": "478b",
-         "titulo": "O titulo da postagem 2",
-         "situacao": "Eu fiquei triste 2",
-         "solucao": "Parei de ficar triste 2",
-         "usuario": "0a7d01db-2b3a-44d1-8a20-574010363476"
-      },
-      {
-         "id": "4778",
-         "titulo": "O titulo da postagem 3",
-         "situacao": "Eu fiquei triste 3",
-         "solucao": "Fiquei feliz",
-         "usuario": "b5b01a0f-6a7d-44e5-a233-532226464010"
-      }
-   ]
+  "usuarios": [
+    {
+      "id": "0a7d01db-2b3a-44d1-8a20-574010363476",
+      "nome": "Mariana Almeida Mendonça",
+      "email": "marianaalmeidafga@gmail.com",
+      "senha": "123456"
+    },
+    {
+      "id": "0b5b0e3e-0d2d-42a8-b871-013616005517",
+      "nome": "Lívia Lima",
+      "email": "livialima@gmail.com",
+      "senha": "123456"
+    },
+    {
+      "id": "b5b01a0f-6a7d-44e5-a233-532226464010",
+      "nome": "Daniela Almeida",
+      "email": "danialmeida@gmail.com",
+      "senha": "123456"
+    }
+  ],
+  "psicologos": [
+    {
+      "id": "55fb",
+      "cpf": "45456456679",
+      "cepp": "43678645",
+      "endereco": "Avenida Abílio Machado, 915",
+      "formacao": "Unifor",
+      "atendimento": "3",
+      "usuario": "b5b01a0f-6a7d-44e5-a233-532226464010"
+    },
+    {
+      "id": "3cd9",
+      "cpf": "14527899999",
+      "cepp": "44775447",
+      "endereco": "Rua Conceição do Mato Dentro",
+      "formacao": "UFMG ",
+      "atendimento": "1",
+      "usuario": "0b5b0e3e-0d2d-42a8-b871-013616005517"
+    },
+    {
+      "id": "9e2f",
+      "cpf": "158.163.766",
+      "cepp": "21154262",
+      "endereco": "Avenida Trinta e Um de Março",
+      "formacao": "PUC MINAS",
+      "atendimento": "2",
+      "usuario": "0a7d01db-2b3a-44d1-8a20-574010363476"
+    }
+  ],
+  "atendimentos": [
+    {
+      "id": "1",
+      "tipo": "Presencial"
+    },
+    {
+      "id": "2",
+      "tipo": "Híbrido"
+    },
+    {
+      "id": "3",
+      "tipo": "Remoto"
+    }
+  ],
+  "conteudos": [
+    {
+      "categoria": "Meditação",
+      "tema": "Respiração",
+      "duracao": 2,
+      "titulo": "Meditação Guiada para Respiração",
+      "id": "1665"
+    },
+    {
+      "categoria": "Meditação",
+      "tema": "Autocompaixão",
+      "duracao": 14,
+      "titulo": "Práticas de Autocompaixão",
+      "id": "2f38"
+    },
+    {
+      "categoria": "Meditação",
+      "tema": "Gratidão",
+      "duracao": 9,
+      "titulo": "Exercícios de Gratidão",
+      "id": "aa82"
+    },
+    {
+      "categoria": "Meditação",
+      "tema": "Ansiedade",
+      "duracao": 16,
+      "titulo": "Redução de Ansiedade Através da Meditação",
+      "id": "5dfd"
+    },
+    {
+      "categoria": "Meditação",
+      "tema": "Inadequação",
+      "duracao": 15,
+      "titulo": "Guiando a Mente para a Aceitação",
+      "id": "3406"
+    },
+    {
+      "categoria": "Meditação",
+      "tema": "Ansiedade",
+      "duracao": 7,
+      "titulo": "Meditação para Reduzir a Ansiedade Diária",
+      "id": "6902"
+    },
+    {
+      "categoria": "Meditação",
+      "tema": "Respiração",
+      "duracao": 23,
+      "titulo": "Sessão de Respiração Profunda",
+      "id": "7a5a"
+    },
+    {
+      "categoria": "Meditação",
+      "tema": "Gratidão",
+      "duracao": 11,
+      "titulo": "Meditação Profunda de Gratidão",
+      "id": "51ee"
+    },
+    {
+      "categoria": "Música",
+      "tema": "Ondas",
+      "duracao": 5,
+      "titulo": "Sons de Ondas do Mar",
+      "id": "9aad"
+    },
+    {
+      "categoria": "Música",
+      "tema": "Chuva",
+      "duracao": 17,
+      "titulo": "Música Relaxante com Som de Chuva",
+      "id": "7d0b"
+    },
+    {
+      "categoria": "Música",
+      "tema": "Floresta",
+      "duracao": 15,
+      "titulo": "Sinfonia da Floresta",
+      "id": "86dd"
+    },
+    {
+      "categoria": "Música",
+      "tema": "Fogueira",
+      "duracao": 6,
+      "titulo": "Noite ao Redor da Fogueira",
+      "id": "bff6"
+    },
+    {
+      "categoria": "Música",
+      "tema": "Piano",
+      "duracao": 34,
+      "titulo": "Melodias de Piano para Relaxar",
+      "id": "6255"
+    },
+    {
+      "categoria": "Música",
+      "tema": "Chuva",
+      "duracao": 4,
+      "titulo": "Som de Chuva para Concentração",
+      "id": "b678"
+    },
+    {
+      "categoria": "Música",
+      "tema": "Piano",
+      "duracao": 8,
+      "titulo": "Concerto de Piano para Relaxamento",
+      "id": "1cdf"
+    },
+    {
+      "categoria": "Música",
+      "tema": "Floresta",
+      "duracao": 41,
+      "titulo": "Imersão Sonora na Floresta",
+      "id": "4354"
+    }
+  ],
+  "favoritos": [
+    {
+      "id": "92a6",
+      "id_favoritos": "aa82"
+    },
+    {
+      "id": "c1b9",
+      "id_favoritos": "5dfd"
+    }
+  ],
+  "vivencias": [
+    {
+      "id": "45cb",
+      "titulo": "O titulo da postagem",
+      "situacao": "Eu fiquei triste",
+      "solucao": "Parei de ficar triste",
+      "usuario": "0a7d01db-2b3a-44d1-8a20-574010363476"
+    },
+    {
+      "id": "478b",
+      "titulo": "O titulo da postagem 2",
+      "situacao": "Eu fiquei triste 2",
+      "solucao": "Parei de ficar triste 2",
+      "usuario": "0a7d01db-2b3a-44d1-8a20-574010363476"
+    },
+    {
+      "id": "4778",
+      "titulo": "O titulo da postagem 3",
+      "situacao": "Eu fiquei triste 3",
+      "solucao": "Fiquei feliz",
+      "usuario": "b5b01a0f-6a7d-44e5-a233-532226464010"
+    }
+  ]
 }

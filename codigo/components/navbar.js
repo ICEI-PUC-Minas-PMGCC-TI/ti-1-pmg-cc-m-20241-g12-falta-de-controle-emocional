@@ -36,8 +36,8 @@ const links = [
       link: "/index.html",
    },
    {
-      name: "Desabafos",
-      link: "/#",
+      name: "Vivências",
+      link: "/modules/vivencias/mostra_vivencias.html",
    },
    {
       name: "Conteúdo",
@@ -46,11 +46,7 @@ const links = [
    {
       name: "Psicólogos",
       link: "/modules/psicologos/mostra_psicologos.html",
-   },
-   {
-      name: "Dicas",
-      link: "/#",
-   },
+   }
 ];
 
 const listLinks = (links) => {
