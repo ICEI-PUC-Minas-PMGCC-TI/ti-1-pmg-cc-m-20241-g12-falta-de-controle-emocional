@@ -17,4 +17,4 @@ O objetivo do site é amenizar os problemas da ansiedade, da tristeza e da raiva
 
 ## Instruções de utilização
 
-Assim que a primeira versão do sistema estiver disponível, deverá complementar com as instruções de utilização. Descreva como instalar eventuais dependências e como executar a aplicação.
+Ligue o json server e o live server para poder rodar o site.
