@@ -110,6 +110,6 @@ A metodologia utilizada foi o kanban.
 
 ## Links Importantes
 - Miro: https://miro.com/app/board/uXjVKdBjxi4=/
-- Figma: https://www.figma.com/proto/Wi3nFBhe7xOvKyJs90Cvr7/TIAW?page-id=0%3A1&type=design&node-id=4-2&viewport=501%2C434%2C0.36&t=31ZPoaDplrWXTEDQ-1&scaling=scale-down&starting-point-node-id=4%3A2&mode=design
+- Figma: https://www.figma.com/design/Qs3WqeYkFjVvNWnZFOLCAg/TIAW---2x?node-id=0-1&t=AUlOafbe0Kn1PxNp-1
 
 
