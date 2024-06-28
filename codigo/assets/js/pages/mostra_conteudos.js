@@ -13,6 +13,18 @@ document.addEventListener('DOMContentLoaded', () => {
     updateThemes();
 });
 
+let user;
+
+// Funções de Manipulação de Usuário
+function get_status() {
+    const user = localStorage.getItem("status");
+    return user ? JSON.parse(user) : null;
+}
+
+function check() {
+    user = get_status();
+}
+
 function message(message, type) {
     msg.classList.remove("none");
     msg.innerHTML = `<div class="${type}">${message}</div>`;
@@ -39,11 +51,14 @@ async function displayContent(data) {
         contentDisplay.innerHTML = '';
 
         data.forEach(item => {
-            const favorito = favoritos.find((fav) => fav.id_favoritos === item.id);
             let isFavorited = false;
-            if (favorito) {
-                isFavorited = true;
-            }
+
+            favoritos.forEach(favorito => {
+                if (favorito.favorito === item.id && favorito.usuario === user.id) {
+                    isFavorited = true;
+                }
+            });
+
             const card = document.createElement('div');
             card.classList.add('content-card');
             card.innerHTML = `
@@ -58,7 +73,7 @@ async function displayContent(data) {
             card.querySelector('.favorite-icon').addEventListener('click', toggleFavorite);
         });
     } catch (error) {
-        console.log(error);
+        console.error(error);
     }
 }
 
@@ -172,26 +187,37 @@ async function getFavorites() {
 }
 
 // Muda favoritos
-function toggleFavorite(event) {
+async function toggleFavorite(event) {
     const icon = event.target;
     const contentId = icon.getAttribute('data-id');
 
-    getFavorites().then(favorites => {
-        const favorito = favorites.find((fav) => fav.id_favoritos === contentId);
+    try {
+        const favorites = await getFavorites();
 
-        if (favorito) {
-            remove_fav(favorito.id);
+        const user_favorites = favorites.filter(fav => fav.favorito === contentId);
+
+        const user_favorite = user_favorites.find(fav => fav.usuario == user.id);
+
+        if (user_favorite) {
+            await Promise.all(user_favorites.map(async fav => {
+                if (fav.usuario == user.id) {
+                    await remove_fav(fav.id);
+                }
+            }));
         } else {
-            saveFavorites(contentId)
+            saveFavorites(contentId);
         }
-    });
+    } catch (error) {
+        console.error("Erro ao alternar favorito:", error);
+        message("Erro ao alternar favorito", "error");
+    }
 }
-
 
 // Salva favoritos
 async function saveFavorites(id) {
     const data = {
-        "id_favoritos": id
+        "favorito": id,
+        "usuario": user.id
     }
 
     const request = new Request("http://localhost:3000/favoritos", {
@@ -204,7 +230,6 @@ async function saveFavorites(id) {
     try {
         const response = await fetch(request);
         if (response.ok) {
-            console.log("Favorito cadastrado com sucesso:", data);
             message("Favorito cadastrado com sucesso", "success");
         } else {
             console.error("Erro ao cadastrar favorito:", response.statusText);
@@ -221,21 +246,34 @@ async function saveFavorites(id) {
 async function remove_fav(id) {
     const url = "http://localhost:3000/favoritos/" + id;
 
-    const request = new Request(url, {
-        method: "DELETE",
-        headers: { "Content-Type": "application/json" },
-    });
-
     try {
-        const response = await fetch(request);
-        if (response.ok) {
-            console.log("Favorito removido com sucesso:", data);
+        const response = await fetch(url, {
+            method: "GET",
+            headers: { "Content-Type": "application/json" }
+        });
+        const favorite = await response.json();
+
+        if (favorite.usuario !== user.id) {
+            console.error("Este favorito não pertence ao usuário logado.");
+            return;
+        }
+
+        const deleteResponse = await fetch(url, {
+            method: "DELETE",
+            headers: { "Content-Type": "application/json" }
+        });
+
+        if (deleteResponse.ok) {
             message("Favorito removido com sucesso", "success");
         } else {
-            console.error("Erro ao remover favorito:", response.statusText);
+            console.error("Erro ao remover favorito:", deleteResponse.statusText);
+            message("Erro ao remover favorito", "error");
         }
     } catch (error) {
         console.error("Erro ao remover favorito:", error);
         message("Erro ao remover favorito", "error");
     }
 }
+
+
+check();

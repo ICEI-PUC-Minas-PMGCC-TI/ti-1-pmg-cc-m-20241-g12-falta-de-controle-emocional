@@ -40,7 +40,7 @@ async function register_vive(event) {
         if (response.ok) {
             console.log("Vivência cadastrada com sucesso!", data);
             message("Vivência cadastrada com sucesso!", "success");
-            window.location.replace("/index.html");
+            window.location.replace("/modules/vivencias/mostra_vivencias.html");
         } else {
             console.error("Erro ao cadastrar a vivência!", response.statusText);
             message("Erro ao cadastrar a vivência!", "error");

@@ -22,19 +22,20 @@ async function vivencias() {
                 try {
                     const user = await get_usuario(vive.usuario);
 
-                    const data = {
-                        nome: user.nome,
-                        titulo: vive.titulo,
-                        situacao: vive.situacao,
-                        solucao: vive.solucao,
-                    };
+                    if (user) {
+                        const data = {
+                            nome: user.nome,
+                            titulo: vive.titulo,
+                            situacao: vive.situacao,
+                            solucao: vive.solucao,
+                        };
 
-                    const activeClass = index === 0 ? 'active' : '';
+                        const activeClass = index === 0 ? 'active' : '';
 
-                    return `<div class="carousel-item ${activeClass}">${cards_html_vive(data)}</div>`;
+                        return `<div class="carousel-item ${activeClass}">${cards_html_vive(data)}</div>`;
+                    }
                 } catch (error) {
                     console.error('Erro ao processar vivências:', error);
-                    message("Erro ao processar as vivências", "error");
                     return '';
                 }
             }));
@@ -42,11 +43,9 @@ async function vivencias() {
             document.getElementById('carousel-inner').innerHTML = htmlContent.join('');
         } else {
             console.error("Erro ao buscar vivências:", response.statusText);
-            message("Erro ao buscar vivências", "error");
         }
     } catch (error) {
         console.error("Erro ao buscar vivências:", error);
-        message("Erro ao buscar vivências", "error");
     }
 }
 
@@ -215,11 +214,9 @@ async function get_psicologos() {
             cards_psi.innerHTML = htmlContent.join('');
         } else {
             console.error("Erro ao buscar psicólogos:", response.statusText);
-            message("Erro ao buscar psicólogos", "error");
         }
     } catch (error) {
         console.error("Erro ao buscar psicólogo:", error);
-        message("Erro ao buscar psicólogo", "error");
     }
 }
 
@@ -234,7 +231,6 @@ async function get_atendimentos(id) {
         }
     } catch (error) {
         console.error("Erro ao buscar tipos de atendimentos:", error);
-        message("Erro ao buscar atendimentos", "error");
     }
 }
 
