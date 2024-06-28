@@ -20,9 +20,9 @@ async function vivencias() {
         const vivencias = await response.json();
 
         if (response.ok) {
-            const limite_vive = vivencias.slice(0, 3);
+            const limitedVivencias = vivencias.slice(0, 4);
 
-            const htmlContent = await Promise.all(limite_vive.map(async (vive) => {
+            const htmlContent = await Promise.all(limitedVivencias.map(async (vive, index) => {
                 try {
                     const user = await get_usuario(vive.usuario);
 
@@ -33,7 +33,9 @@ async function vivencias() {
                         solucao: vive.solucao,
                     };
 
-                    return cards_html(data);
+                    const activeClass = index === 0 ? 'active' : '';
+
+                    return `<div class="carousel-item ${activeClass}">${cards_html(data)}</div>`;
                 } catch (error) {
                     console.error('Erro ao processar vivências:', error);
                     message("Erro ao processar as vivências", "error");
@@ -41,7 +43,7 @@ async function vivencias() {
                 }
             }));
 
-            cards.innerHTML = htmlContent.join('');
+            document.getElementById('carousel-inner').innerHTML = htmlContent.join('');
         } else {
             console.error("Erro ao buscar vivências:", response.statusText);
             message("Erro ao buscar vivências", "error");
