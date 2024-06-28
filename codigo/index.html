@@ -37,10 +37,10 @@
 
    <!-- Desabafos -->
    <section class="section section__vive">
-      <h1 class="section__vive__title">Vivências</h1>
+      <h1 class="section__title">Vivências</h1>
       <div id="cardCarousel" class="carousel slide" data-bs-ride="carousel">
          <div class="carousel-inner" id="carousel-inner">
-            <!-- Os slides do carrossel serão preenchidos dinamicamente aqui -->
+            <!-- info -->
          </div>
          <button class="carousel-control-prev" type="button" data-bs-target="#cardCarousel" data-bs-slide="prev">
             <span class="carousel-control-prev-icon"></span>
@@ -49,13 +49,51 @@
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
          </button>
       </div>
+
+      <div class="section__vive__btn">
+         <div class="section__vive__btn--position">
+            <a class="btn_outline" href="/modules/vivencias/mostra_vivencias.html">
+               Ver mais
+               <i class="fa-solid fa-arrow-right"></i>
+            </a>
+         </div>
+      </div>
+
    </section>
 
    <!-- Conteúdos -->
-   <section>Conteúdos</section>
+   <section class="section section__cont">
+      <h1 class="section__title">Conteúdos</h1>
+
+      <div class="section__cont__tags">
+         <button class="section__cont__tags__btn section__cont__tags--medi">Meditações</button>
+         <button class="section__cont__tags__btn section__cont__tags--musi">Músicas</button>
+      </div>
+
+      <div class="section__cont__cards">
+         <div id="contentDisplay">
+            <!-- info -->
+         </div>
+      </div>
+
+      <div class="section__cont__btn">
+         <div class="section__cont__btn--position">
+            <a class="btn_outline" href="/modules/conteudos/mostra_conteudos.html">
+               Ver mais
+               <i class="fa-solid fa-arrow-right"></i>
+            </a>
+         </div>
+      </div>
+   </section>
 
    <!-- Psicólgos -->
-   <section>Psicólgos</section>
+   <section class="section section__cont">
+      <h1 class="section__title">Psicólgos
+         <div class="section cards__psi" id="cards">
+            <!-- Cards via js-->
+         </div>
+      </h1>
+   </section>
 
    <!--Footer-->
    <footer class="footer" profiles__list></footer>

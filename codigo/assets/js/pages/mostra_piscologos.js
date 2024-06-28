@@ -27,9 +27,6 @@ function cards_html(data) {
         class_tipo_atd = "remoto";
     }
 
-
-
-
     return `
         <div class="card__psic">
             <div class="card__title">

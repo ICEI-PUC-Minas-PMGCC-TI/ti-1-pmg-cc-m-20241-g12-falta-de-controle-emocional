@@ -4,7 +4,35 @@
    }
 
    .card__vive {
-      width: 60%;
+      width: 75%;
+   }
+
+   .carousel-control-prev-icon,
+   .carousel-control-next-icon {
+      width: 3rem !important;
+      height: 3rem !important;
+   }
+
+   .section__vive__btn--position {
+      width: 75%;
+   }
+
+   .content-card h3 {
+      font-size: 1.5rem !important;
+   }
+
+   .section__cont {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+   }
+
+   .section__cont__cards {
+      width: 80%;
+   }
+
+   .section__cont__btn--position {
+      width: 80%;
    }
 }
 
@@ -22,7 +50,31 @@
    }
 
    .card__vive {
-      width: 85%;
+      width: 100%;
+   }
+
+   .carousel-control-prev-icon,
+   .carousel-control-next-icon {
+      width: 2rem !important;
+      height: 2rem !important;
+   }
+
+   .carousel-control-next {
+      justify-content: flex-end !important;
+   }
+
+   .carousel-control-prev {
+      justify-content: flex-start !important;
+   }
+
+   .section__cont__btn--position,
+   .section__vive__btn--position {
+      width: 100%;
+   }
+
+   .section__vive__btn,
+   .section__cont__btn {
+      justify-content: end !important;
    }
 }
 
@@ -64,7 +116,7 @@
    text-align: center;
 }
 
-.section__vive__title {
+.section__title {
    font-weight: bold;
    font-size: 2rem;
    width: 100%;
@@ -72,6 +124,8 @@
    padding-bottom: 1rem;
    margin-bottom: 20px;
 }
+
+/* Vivencias */
 
 .card__vive {
    position: relative;
@@ -182,14 +236,124 @@
 }
 
 .carousel-control-prev-icon {
-   width: 3rem !important;
-   height: 3rem !important;
    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%231e1e1e'%3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e") !important;
 }
 
 .carousel-control-next-icon {
-   width: 3rem !important;
-   height: 3rem !important;
    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%231e1e1e'%3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e") !important;
    transform: rotateY(180deg);
+}
+
+.section__vive__btn {
+   width: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.section__vive__btn--position {
+   display: flex;
+   justify-content: end;
+}
+
+/* Conteudos */
+.section__cont__cards {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+#contentDisplay {
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   gap: 10px;
+   width: 100%;
+}
+
+.content-card {
+   position: relative;
+   background-color: #fff;
+   border: 1px solid #9c9c9c;
+   border-radius: 5px;
+   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+   padding: 20px;
+   padding-top: 40px;
+   width: 100%;
+   transition: transform 0.2s;
+}
+
+.content-card h3 {
+   font-size: 1rem;
+   margin-bottom: 10px;
+   color: #333;
+   font-weight: 600;
+}
+
+.content-card p {
+   margin-bottom: 10px;
+   font-size: 1em;
+   color: #666;
+}
+
+.content-card:hover {
+   transform: translateY(-5px);
+}
+
+.favorite-icon {
+   position: absolute;
+   top: 10px;
+   right: 10px;
+   cursor: pointer;
+   font-size: 1.5em;
+   color: #000000a4 !important;
+   transition: color 0.3s;
+}
+
+.favorite-icon.favorited {
+   color: #85a6e5 !important;
+}
+
+#favoritesDisplay {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 20px;
+}
+
+.section__cont__tags {
+   width: 100%;
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   gap: 1em;
+   padding: 0rem 0rem 2rem 0rem;
+}
+
+.section__cont__tags__btn {
+   color: #fff !important;
+   border-radius: 2px;
+   display: flex;
+   justify-content: center;
+   padding: 0.25rem 1rem;
+   width: fit-content;
+}
+
+.section__cont__tags--medi {
+   background-color: #061f4e;
+}
+
+.section__cont__tags--musi {
+   background-color: #22478e;
+}
+
+.section__cont__btn {
+   width: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding: 1rem 0rem;
+}
+
+.section__cont__btn--position {
+   display: flex;
+   justify-content: end;
 }
