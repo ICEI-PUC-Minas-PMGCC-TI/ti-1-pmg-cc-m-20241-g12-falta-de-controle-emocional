@@ -23,7 +23,7 @@ Nossa aplicação busca melhorar os problemas da ansiedade, da tristeza e da rai
 
 ## Objetivos
 
-O objetivo ao desenvolver o software é amenizar os problemas da ansiedade, da tristeza e da raiva, principalmente ajudando o usuário a entender e a controlar melhor essas emoções.
+O objetivo ao desenvolver o software é amenizar os problemas da ansiedade, da tristeza e da raiva, ajudando o usuário a entender e a controlar melhor essas emoções.
 
 ## Justificativa
 Atualmente muitas pessoas se sentem ansiosas, principalmente no Brasil, onde o índice de ansiedade é altíssimo. Isso se deve à pandemia, como nos outros países, mas também devido às várias mudanças na economia, o alto índice de desemprego, a falta de segurança pública, dentre outros. Também por causa desses fatores, o Brasil é um dos países com maior índice de depressão e, por isso, amenizar a ansiedade e a depressão é tão importante. As formas do nosso site de tentar amenizá-los também funciona para a raiva, por isso a incluímos em nossos objetivos.
