@@ -16,10 +16,10 @@ O template para o site é estruturado e permite que a equipe evolua a documenta�
 
 # Orientações gerais
 
-O projeto é um site que auxilia na falta de controle emocional. Ele oferece ferramentas que possam auxiliar o usuário, como vivências similares de demais usuário, conteúdos como vídeos e fotos que visam uma maior tranquilidade, dicas e psicólogos confiáveis para realizarem consultas.
+O projeto é um site que auxilia na falta de controle emocional. Ele oferece ferramentas que possam auxiliar o usuário, como vivências similares de demais usuários, meditações e músicas que visam uma maior tranquilidade, e psicólogos confiáveis para realizarem consultas.
 
 ## Problema
-Nossa aplicação busca melhorar os problemas da ansiedade, da tristeza e da raiva. 
+Nossa aplicação busca melhorar os problemas da ansiedade, da tristeza e da raiva.
 
 ## Objetivos
 
@@ -46,34 +46,34 @@ Ana Catarina:
 <table class="table">
   <thead>
     <tr>
-      <th scope="col">EU COMO...</th>
+      <th scope="col">EU</th>
       <th scope="col">
-        QUERO/PRECISO...
+        EU QUERO/PRECISO...
       </th>
-      <th scope="col">PARA...</th>
+      <th scope="col">COMO EU ALCANÇARIA ESSE OBJETIVO?</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th scope="row">Sandra</th>
       <td>
-        Me sentir menos ansiosa e com mal estar
+        Me sentir menos ansiosa e com mal estar.
       </td>
-      <td>Informações pertinentes e verídicas sobre temas de ansiedade</td>
+      <td>Lendo informações pertinentes e verídicas sobre temas de ansiedade.</td>
     </tr>
     <tr>
       <th scope="row">Pedro</th>
       <td>
-        Pensar menos no meu futuro e gastar mais tempo com soluções
+        Pensar menos no meu futuro e gastar mais tempo com soluções.
       </td>
-      <td>Ferramentas entratégicas para colocar soluções em prática, como vídeos e fotos de conteúdos para controle mental.</td>
+      <td>Por meio de ferramentas entratégicas para colocar soluções em prática, como vídeos e fotos de conteúdos para controle mental.</td>
     </tr>
     <tr>
       <th scope="row">Lívia</th>
       <td>
-        Quer afetar menos sua vida pessoal, e estar menos tensa com seu presente.
+        Afetar menos a minha vida pessoal, e estar menos tensa com meu presente.
       </td>
-      <td>Acesso a psicólogos mais acessíveis e próximos a ela</td>
+      <td>Por meio de uma seção de psicólogos mais acessíveis e próximos a mim</td>
     </tr>
   </tbody>
 </table>
@@ -81,14 +81,13 @@ Ana Catarina:
 ## Requisitos
 ### Requisitos funcionais:
 - Cadastro de usuário.
-- Vídeos relaxantes.
-- Seção de vivências e dicas de relaxamento.
-- Teste de personalidade.
+- Seção sobre meditações.
+- Seção de vivências.
 - Acesso a psicólgos próximos.
 #### Requisitos não funcionais:
 - Privacidade de informações pessoais.
 - Psicólogos verificados pelo CEPP.
-- Fotos e vídeos de alta qualidade.
+- Músicas de alta qualidade.
 
 ## User Flow
 
@@ -105,8 +104,8 @@ Para uma melhor visualização do wireframe do projeto, por favor, baixe o arqui
 ## Gestão de Projetos
 A metodologia utilizada foi o kanban.
 ### Divisão de Tarefas:
-- Ana Luíza ficou responsável por fazer a documentação do trabalho
-- Mariana por fazer o wireframe e o design thinking
+- Ana Luíza ficou responsável por fazer a documentação do trabalho;
+- Mariana por fazer o wireframe e o design thinking;
 - João por fazer o mapa de empatia, os slides da apresentação e o roteiro do pitch.
 
 ## Links Importantes
