@@ -6,10 +6,11 @@ const cards = document.getElementById("cards");
 const form = document.getElementById("search");
 
 function message(message, type) {
-    const msg = document.getElementById("msg");
-    setTimeout(() => msg.classList.add("none"), 6000);
     msg.classList.remove("none");
-    msg.innerHTML = `<div class="${type}">` + message + "</div>";
+    msg.innerHTML = `<div class="${type}">${message}</div>`;
+    setTimeout(() => {
+        msg.classList.add("none");
+    }, 6000);
 }
 
 let user;
@@ -44,6 +45,7 @@ async function vivencias() {
                     return cards_html(data);
                 } catch (error) {
                     console.error('Erro ao processar vivências:', error);
+                    message("Erro ao processar as vivências", "error")
                     return '';
                 }
             }));

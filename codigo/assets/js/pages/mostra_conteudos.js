@@ -13,6 +13,13 @@ document.addEventListener('DOMContentLoaded', () => {
     updateThemes();
 });
 
+function message(message, type) {
+    msg.classList.remove("none");
+    msg.innerHTML = `<div class="${type}">${message}</div>`;
+    setTimeout(() => {
+        msg.classList.add("none");
+    }, 6000);
+}
 
 // Faz a chamada da url | todos | pesquisa | filtro
 function loadContent() {
@@ -198,14 +205,14 @@ async function saveFavorites(id) {
         const response = await fetch(request);
         if (response.ok) {
             console.log("Favorito cadastrado com sucesso:", data);
-            //message("Favorito cadastrado com sucesso", "success");
+            message("Favorito cadastrado com sucesso", "success");
         } else {
             console.error("Erro ao cadastrar favorito:", response.statusText);
-            //message("Erro ao cadastrar favorito", "error");
+            message("Erro ao cadastrar favorito", "error");
         }
     } catch (error) {
         console.error("Erro ao cadastrar novo favorito:", error);
-        //message("Erro ao cadastrar favorito", "error");
+        message("Erro ao cadastrar favorito", "error");
     }
 }
 
@@ -223,13 +230,12 @@ async function remove_fav(id) {
         const response = await fetch(request);
         if (response.ok) {
             console.log("Favorito removido com sucesso:", data);
-            //message("Psicólogo removido com sucesso", "success");
+            message("Favorito removido com sucesso", "success");
         } else {
             console.error("Erro ao remover favorito:", response.statusText);
-            //message("Erro ao remover psicólogo", "error");
         }
     } catch (error) {
         console.error("Erro ao remover favorito:", error);
-        //message("Erro ao remover psicólogo", "error");
+        message("Erro ao remover favorito", "error");
     }
 }

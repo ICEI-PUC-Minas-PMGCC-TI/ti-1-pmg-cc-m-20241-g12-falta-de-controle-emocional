@@ -76,10 +76,18 @@
 }
 
 .card__vive {
-   border: 1px #1e1e1e solid;
    width: 100%;
    padding: 1rem 1rem;
    margin-bottom: 1rem;
+   position: relative;
+   border: 1px solid #9c9c9c;
+   border-radius: 5px;
+   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+   transition: transform 0.2s;
+}
+
+.card__vive:hover {
+   transform: translateY(-5px);
 }
 
 .card__title {
@@ -108,18 +116,6 @@
 .card__name {
    font-weight: bold;
    font-size: 1rem;
-}
-
-.card__type {
-   background-color: #22478e;
-   color: #fff !important;
-   border-radius: 2px;
-   display: flex;
-   justify-content: center;
-   padding: 0.25rem 0.25rem;
-   font-size: x-small;
-   width: fit-content;
-   font-weight: bold;
 }
 
 .card__info__lista {
