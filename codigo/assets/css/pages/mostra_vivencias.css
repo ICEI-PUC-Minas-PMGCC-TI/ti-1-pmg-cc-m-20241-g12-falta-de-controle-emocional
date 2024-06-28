@@ -13,6 +13,11 @@
       grid-template-columns: repeat(2, 1fr);
       gap: 10px;
    }
+
+   .section__btn {
+      padding: 0rem 6rem;
+      margin: 2rem 0rem;
+   }
 }
 
 @media (max-width: 730px) {
@@ -27,6 +32,11 @@
 
    .header--overlay {
       padding-bottom: 1.5rem;
+   }
+
+   .section__btn {
+      padding: 0rem 1rem;
+      margin: 2rem 0rem;
    }
 }
 
@@ -129,4 +139,40 @@
 
 .card__info__item i {
    padding-right: 0.5rem;
+}
+
+.card__quote {
+   position: absolute;
+   right: 18px;
+   top: -18px;
+   color: #061f4e !important;
+   font-size: 2.5rem;
+}
+
+.card__type {
+   background-color: #c1d3f4;
+   color: #1e1e1e !important;
+   border-radius: 2px;
+   display: flex;
+   justify-content: center;
+   padding: 0.15rem 0.25rem;
+   font-size: x-small;
+   width: fit-content;
+}
+
+.btn__cad__vivencias {
+   background-color: #061f4e;
+   font-weight: bold;
+   padding: 0.25rem 0.5rem;
+   border-radius: 2px;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.btn__cad__vivencias p,
+.btn__cad__vivencias i {
+   color: #fff !important;
+   margin: 0;
 }

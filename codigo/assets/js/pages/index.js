@@ -1,17 +1,7 @@
 const url_vive = "http://localhost:3000/vivencias";
 const url_user = "http://localhost:3000/usuarios";
 
-const msg = document.getElementById("msg");
 const cards = document.getElementById("cards");
-const form = document.getElementById("search");
-
-function message(message, type) {
-    msg.classList.remove("none");
-    msg.innerHTML = `<div class="${type}">${message}</div>`;
-    setTimeout(() => {
-        msg.classList.add("none");
-    }, 6000);
-}
 
 let user;
 
@@ -24,14 +14,15 @@ function check() {
     user = get_status();
 }
 
-
 async function vivencias() {
     try {
         const response = await fetch(url_vive);
         const vivencias = await response.json();
 
         if (response.ok) {
-            const htmlContent = await Promise.all(vivencias.map(async (vive) => {
+            const limite_vive = vivencias.slice(0, 3);
+
+            const htmlContent = await Promise.all(limite_vive.map(async (vive) => {
                 try {
                     const user = await get_usuario(vive.usuario);
 
@@ -45,7 +36,7 @@ async function vivencias() {
                     return cards_html(data);
                 } catch (error) {
                     console.error('Erro ao processar vivências:', error);
-                    message("Erro ao processar as vivências", "error")
+                    message("Erro ao processar as vivências", "error");
                     return '';
                 }
             }));
@@ -60,6 +51,7 @@ async function vivencias() {
         message("Erro ao buscar vivências", "error");
     }
 }
+
 
 function cards_html(data) {
 
@@ -110,69 +102,5 @@ async function get_usuario(id) {
     }
 }
 
-async function search_cards(event) {
-    event.preventDefault();
-    const form = event.target;
-    const formData = new FormData(form);
-    const query = Object.fromEntries(formData);
-
-    try {
-
-        const response = await fetch(url_vive);
-        const vivencias = await response.json();
-
-        const response_user = await fetch(url_user);
-        const usuarios = await response_user.json();
-
-        let search = "";
-        search = search_vivencias(vivencias, query, usuarios);
-        if (search == "") {
-            message("Resultado não encontrado", "error")
-        }
-
-        search_html(search);
-    } catch {
-        console.error('Erro ao buscar dados:', error);
-    }
-}
-
-function search_vivencias(vivencias, query, usuarios) {
-
-    const attributes = ["titulo", "situacao", "solucao"];
-    let search = query.search;
-
-    const return_vivencias = new Set();
-    vivencias.forEach(vive => {
-        attributes.forEach(attribute => {
-            if (vive[attribute].toLowerCase().includes(search.toLowerCase())) {
-                usuarios.forEach(user => {
-                    if (user.id == vive.usuario) {
-                        const data = {
-                            nome: user.nome,
-                            titulo: vive.titulo,
-                            situacao: vive.situacao,
-                            solucao: vive.solucao,
-                        };
-
-                        return_vivencias.add(JSON.stringify(data));
-                    }
-                });
-            }
-        });
-    });
-    const new_data = Array.from(return_vivencias).map(item => JSON.parse(item));
-    return new_data;
-}
-
-function search_html(search_results) {
-    let html = '';
-    search_results.forEach(result => {
-        html += cards_html(result);
-    });
-
-    cards.innerHTML = html;
-}
-
-form.addEventListener("submit", search_cards);
 vivencias();
 check();
