@@ -26,6 +26,20 @@
          "situacao": "Eu fiquei triste",
          "solucao": "Parei de ficar triste",
          "usuario": "0a7d01db-2b3a-44d1-8a20-574010363476"
+      },
+      {
+         "id": "478b",
+         "titulo": "O titulo da postagem 2",
+         "situacao": "Eu fiquei triste 2",
+         "solucao": "Parei de ficar triste 2",
+         "usuario": "0a7d01db-2b3a-44d1-8a20-574010363476"
+      },
+      {
+         "id": "4778",
+         "titulo": "O titulo da postagem 3",
+         "situacao": "Eu fiquei triste 3",
+         "solucao": "Fiquei feliz",
+         "usuario": "b5b01a0f-6a7d-44e5-a233-532226464010"
       }
    ]
 }

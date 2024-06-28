@@ -2,7 +2,6 @@ const url_vive = "http://localhost:3000/vivencias";
 
 let user;
 
-// Funções de Manipulação de Usuário
 function get_status() {
     const user = localStorage.getItem("status");
     return user ? JSON.parse(user) : null;
@@ -10,7 +9,6 @@ function get_status() {
 
 function check() {
     user = get_status();
-    console.log(user);
 }
 
 function message(message, type) {
