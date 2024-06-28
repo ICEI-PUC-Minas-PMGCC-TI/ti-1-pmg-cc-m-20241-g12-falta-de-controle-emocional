@@ -1,4 +1,4 @@
-@media (min-width: 730px) {
+@media (min-width: 768px) {
    .header__title {
       width: 50%;
    }
@@ -34,9 +34,23 @@
    .section__cont__btn--position {
       width: 80%;
    }
+
+   .section__cards__psi {
+      width: 80%;
+   }
+
+   .section__psi__btn--position {
+      width: 80%;
+   }
+
+   .cards__psi {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+   }
 }
 
-@media (max-width: 730px) {
+@media (max-width: 768px) {
    .header__title {
       font-size: 1rem;
    }
@@ -68,13 +82,19 @@
    }
 
    .section__cont__btn--position,
+   .section__psi__btn--position,
    .section__vive__btn--position {
       width: 100%;
    }
 
    .section__vive__btn,
-   .section__cont__btn {
+   .section__cont__btn,
+   .section__psi__btn {
       justify-content: end !important;
+   }
+
+   .section__cards__psi {
+      width: 100%;
    }
 }
 
@@ -126,7 +146,6 @@
 }
 
 /* Vivencias */
-
 .card__vive {
    position: relative;
    padding: 1rem 1rem;
@@ -170,16 +189,16 @@
    font-size: 1rem;
 }
 
-.card__info__lista {
+.card__info__lista__vive {
    list-style: none;
    padding: 0rem 0.5rem;
 }
 
-.card__info__item {
+.card__info__item__vive {
    padding: 0rem 0.5rem;
 }
 
-.card__info__item i {
+.card__info__item__vive i {
    padding-right: 0.5rem;
 }
 
@@ -257,6 +276,12 @@
 }
 
 /* Conteudos */
+.section__cont {
+   padding-top: 1rem;
+   padding-bottom: 1rem;
+   background-color: #f8f8f8;
+}
+
 .section__cont__cards {
    display: flex;
    justify-content: center;
@@ -272,7 +297,6 @@
 
 .content-card {
    position: relative;
-   background-color: #fff;
    border: 1px solid #9c9c9c;
    border-radius: 5px;
    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -356,4 +380,112 @@
 .section__cont__btn--position {
    display: flex;
    justify-content: end;
+}
+
+/* Psicologos */
+
+.card__psic {
+   width: 100%;
+   padding: 1rem 1rem;
+   margin-bottom: 1rem;
+   position: relative;
+   border: 1px solid #9c9c9c;
+   border-radius: 5px;
+   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+   transition: transform 0.2s;
+}
+
+.card__psic:hover {
+   transform: translateY(-5px);
+}
+
+.card__title {
+   display: flex;
+   flex-direction: row;
+   padding-bottom: 1rem;
+}
+
+.card__title--info {
+   display: flex;
+   flex-direction: column;
+   padding: 0.5rem 1rem;
+   justify-content: space-around;
+}
+
+.card__image__icon {
+   height: 4rem;
+   width: 4rem;
+   border-radius: 50%;
+   background-color: #b3b3b3;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.card__type {
+   background-color: #22478e;
+   color: #fff !important;
+   border-radius: 2px;
+   display: flex;
+   justify-content: center;
+   padding: 0.25rem 0.25rem;
+   font-size: x-small;
+   width: fit-content;
+   font-weight: bold;
+}
+
+.hibrido {
+   background-color: #061f4e !important;
+}
+
+.remoto {
+   background-color: #85a6e5 !important;
+}
+
+.presencial {
+   background-color: #22478e !important;
+}
+
+.card__info__lista__psi {
+   list-style: none;
+   padding: 0rem 0.5rem;
+}
+
+.card__info__item__psi {
+   padding: 0rem 0.5rem;
+}
+
+.card__info__item__psi i {
+   padding-right: 0.5rem;
+}
+
+.card__info__item__psi p {
+   font-weight: 400;
+   font-size: 1rem;
+}
+
+.section__psi__btn {
+   width: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding: 1rem 0rem;
+}
+
+.section__psi__btn--position {
+   display: flex;
+   justify-content: end;
+}
+
+.section__psi {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+}
+
+.section__psi__cards {
+   display: flex;
+   justify-content: center;
+   align-items: center;
 }

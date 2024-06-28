@@ -1,9 +1,13 @@
 // url
 const url_vive = "http://localhost:3000/vivencias";
 const url_user = "http://localhost:3000/usuarios";
+const URL_PSI = "http://localhost:3000/psicologos";
+const URL_USER = "http://localhost:3000/usuarios";
+const URL_ATD = "http://localhost:3000/atendimentos";
 
 // elements html
 const cards = document.getElementById("cards");
+const cards_psi = document.getElementById("cards_psi");
 
 // vivencias
 async function vivencias() {
@@ -27,7 +31,7 @@ async function vivencias() {
 
                     const activeClass = index === 0 ? 'active' : '';
 
-                    return `<div class="carousel-item ${activeClass}">${cards_html(data)}</div>`;
+                    return `<div class="carousel-item ${activeClass}">${cards_html_vive(data)}</div>`;
                 } catch (error) {
                     console.error('Erro ao processar vivências:', error);
                     message("Erro ao processar as vivências", "error");
@@ -47,7 +51,7 @@ async function vivencias() {
 }
 
 
-function cards_html(data) {
+function cards_html_vive(data) {
 
     return `
          <div class="card__vive">
@@ -65,13 +69,13 @@ function cards_html(data) {
                 </div>
             </div>
 
-            <div class="card__info">
-                <ul class="card__info__lista">
-                    <li class="card__info__item">
+            <div class="card__info__vive">
+                <ul class="card__info__lista__vive">
+                    <li class="card__info__item__vive">
                         <h6><b>Situação:</b></h6>
                         <p>${data.situacao}</p>
                     </li>
-                    <li class="card__info__item">
+                    <li class="card__info__item__vive">
                         <h6><b>Solução:</b></h6>
                         <p>${data.solucao}</p>
                     </li>
@@ -133,7 +137,7 @@ async function displayContent(data) {
 }
 
 // Psicologo
-function cards_html(data) {
+function cards_html_psi(data) {
 
     let class_tipo_atd;
     if (data.id == 1) {
@@ -159,17 +163,17 @@ function cards_html(data) {
                 </div >
             </div >
 
-        <div class="card__info">
-            <ul class="card__info__lista">
-                <li class="card__info__item">
+        <div class="card__info__psi">
+            <ul class="card__info__lista__psi">
+                <li class="card__info__item__psi">
                     <i class="fa-solid fa-location-dot"></i>
                     ${data.endereco}
                 </li>
-                <li class="card__info__item">
+                <li class="card__info__item__psi">
                     <i class="fa-solid fa-user-doctor"></i>
                     CEPP: ${data.cepp}
                 </li>
-                <li class="card__info__item">
+                <li class="card__info__item__psi">
                     <i class="fa-solid fa-graduation-cap"></i>
                     Formação: ${data.formacao}
                 </li>
@@ -185,7 +189,9 @@ async function get_psicologos() {
         const psicologos = await response.json();
 
         if (response.ok) {
-            const htmlContent = await Promise.all(psicologos.map(async (psi) => {
+            const psicologos_slice = psicologos.slice(0, 3);
+
+            const htmlContent = await Promise.all(psicologos_slice.map(async (psi) => {
                 try {
                     const user = await get_usuario(psi.usuario);
                     const atd = await get_atendimentos(psi.atendimento);
@@ -199,14 +205,14 @@ async function get_psicologos() {
                         formacao: psi.formacao
                     };
 
-                    return cards_html(data);
+                    return cards_html_psi(data);
                 } catch (error) {
                     console.error('Erro ao processar psicólogo:', error);
                     return ''; // Retorna uma string vazia para ignorar este psicólogo em caso de erro
                 }
             }));
 
-            cards.innerHTML = htmlContent.join('');
+            cards_psi.innerHTML = htmlContent.join('');
         } else {
             console.error("Erro ao buscar psicólogos:", response.statusText);
             message("Erro ao buscar psicólogos", "error");
@@ -214,22 +220,6 @@ async function get_psicologos() {
     } catch (error) {
         console.error("Erro ao buscar psicólogo:", error);
         message("Erro ao buscar psicólogo", "error");
-    }
-}
-
-
-async function get_usuario(id) {
-    try {
-        const response = await fetch(URL_USER);
-        const usuarios = await response.json();
-
-        const usuario = usuarios.find((u) => u.id === id);
-
-        if (usuario) {
-            return usuario;
-        }
-    } catch (error) {
-        return console.error("Erro ao buscar usuario:", error);
     }
 }
 
