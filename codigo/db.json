@@ -190,26 +190,6 @@
          "id_favoritos": "1665"
       }
    ],
-   "usuarios": [
-      {
-         "id": "0a7d01db-2b3a-44d1-8a20-574010363476",
-         "nome": "Mariana Almeida Mendonça",
-         "email": "marianaalmeidafga@gmail.com",
-         "senha": "123456"
-      },
-      {
-         "id": "0b5b0e3e-0d2d-42a8-b871-013616005517",
-         "nome": "Lívia Lima",
-         "email": "livialima@gmail.com",
-         "senha": "123456"
-      },
-      {
-         "id": "b5b01a0f-6a7d-44e5-a233-532226464010",
-         "nome": "Daniela Almeida",
-         "email": "danialmeida@gmail.com",
-         "senha": "123456"
-      }
-   ],
    "vivencias": [
       {
          "id": "45cb",
