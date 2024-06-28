@@ -1,0 +1,136 @@
+@media (min-width: 730px) {
+   .header__title {
+      width: 80%;
+      text-align: center;
+   }
+
+   .header__group {
+      width: 80% !important;
+   }
+
+   .cards__vive {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+   }
+}
+
+@media (max-width: 730px) {
+   .header__title {
+      font-size: 1.75rem;
+      text-align: left;
+   }
+
+   .header__text {
+      font-size: 0.75rem;
+   }
+
+   .header--overlay {
+      padding-bottom: 1.5rem;
+   }
+}
+
+.header {
+   height: 14rem;
+   color: #fff !important;
+   display: flex;
+   justify-content: center;
+}
+
+.header__img {
+   object-fit: cover;
+   filter: brightness(45%);
+   height: 100%;
+   width: 100%;
+}
+
+.header--overlay {
+   position: absolute;
+   width: 100%;
+   height: 14rem;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   padding: 3rem;
+}
+
+.header__title {
+   color: #fff !important;
+   font-weight: 900;
+}
+
+.header__input {
+   background-color: rgba(255, 255, 255, 0.233) !important;
+   color: #fff !important;
+}
+
+.header__input::placeholder {
+   color: #fff !important;
+   font-size: small;
+}
+
+.header__button {
+   background-color: #fff !important;
+   color: transparent;
+}
+
+.card__vive {
+   border: 1px #1e1e1e solid;
+   width: 100%;
+   padding: 1rem 1rem;
+   margin-bottom: 1rem;
+}
+
+.card__title {
+   display: flex;
+   flex-direction: row;
+   padding-bottom: 1rem;
+}
+
+.card__title--info {
+   display: flex;
+   flex-direction: column;
+   padding: 0.5rem 1rem;
+   justify-content: space-around;
+}
+
+.card__image__icon {
+   height: 4rem;
+   width: 4rem;
+   border-radius: 50%;
+   background-color: #b3b3b3;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.card__name {
+   font-weight: bold;
+   font-size: 1rem;
+}
+
+.card__type {
+   background-color: #22478e;
+   color: #fff !important;
+   border-radius: 2px;
+   display: flex;
+   justify-content: center;
+   padding: 0.25rem 0.25rem;
+   font-size: x-small;
+   width: fit-content;
+   font-weight: bold;
+}
+
+.card__info__lista {
+   list-style: none;
+   padding: 0rem 0.5rem;
+}
+
+.card__info__item {
+   padding: 0rem 0.5rem;
+}
+
+.card__info__item i {
+   padding-right: 0.5rem;
+}
