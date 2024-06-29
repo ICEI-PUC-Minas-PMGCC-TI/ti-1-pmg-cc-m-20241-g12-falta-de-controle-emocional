@@ -91,14 +91,20 @@ Ana Catarina:
 
 ## User Flow
 
-![userflow](https://github.com/ICEI-PUC-Minas-PMGCC-TI/ti-1-pmg-cc-m-20241-g12-falta-de-controle-emocional/assets/165406204/929ea8ee-ce64-427e-97c8-e2f80cf27bed)
+![User flow](../codigo/assets/img/userflow.jpeg)
 
 
 ## Wireframes
-Para uma melhor visualização do wireframe do projeto, por favor, baixe o arquivo abaixo e examine as telas disponíveis.
-<br/>
-[Download](https://github.com/ICEI-PUC-Minas-PMGCC-TI/ti-1-pmg-cc-m-20241-g12-falta-de-controle-emocional/files/15056477/arquivo.pdf)
-
+![image](../codigo/assets/img/wireframes/Cadastro%20de%20Psicólogo.jpg)<br>
+![image](../codigo/assets/img/wireframes/Cadastro%20de%20Vivências.jpg)<br>
+![image](../codigo/assets/img/wireframes/Conteúdos.jpg)<br>
+![image](../codigo/assets/img/wireframes/Login.jpg)<br>
+![image](../codigo/assets/img/wireframes/Psicologos.png)<br>
+![image](../codigo/assets/img/wireframes/Página%20de%20Informações.jpg)<br>
+![image](../codigo/assets/img/wireframes/Página%20de%20Usuário.jpg)<br>
+![image](../codigo/assets/img/wireframes/Tela%20Inicial-1.jpg)<br>
+![image](../codigo/assets/img/wireframes/Tela%20Inicial.jpg)<br>
+![image](../codigo/assets/img/wireframes/Vivências.jpg)<br>
 
 
 ## Gestão de Projetos
