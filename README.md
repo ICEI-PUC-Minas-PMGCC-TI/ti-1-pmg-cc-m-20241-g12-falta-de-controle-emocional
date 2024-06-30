@@ -4,16 +4,16 @@ O objetivo do site é amenizar os problemas da ansiedade, da tristeza e da raiva
 
 ## Alunos integrantes da equipe
 
-* Ana Luíza de Morais Lemos
-* João Costa Calazans
-* Mariana Almeida Mendonça
+* Ana Luíza de Morais Lemos;
+* João Costa Calazans;
+* Mariana Almeida Mendonça.
 
 ## Professores responsáveis
 
-* João Carlos Oliveira Caetano
-* Luciana Mara Freitas Diniz
-* Pedro Henrique Ramos Costa
-* Rommel Veira Carneiro
+* João Carlos Oliveira Caetano;
+* Luciana Mara Freitas Diniz;
+* Pedro Henrique Ramos Costa;
+* Rommel Veira Carneiro.
 
 ## Instruções de utilização
 

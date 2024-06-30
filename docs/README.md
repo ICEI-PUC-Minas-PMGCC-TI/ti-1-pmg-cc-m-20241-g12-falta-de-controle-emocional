@@ -109,6 +109,7 @@ Ana Catarina:
 
 ## Gestão de Projetos
 A metodologia utilizada foi o kanban.
+
 ### Divisão de Tarefas:
 - Ana Luíza ficou responsável por fazer a documentação do trabalho;
 - Mariana por fazer o wireframe e o design thinking;
