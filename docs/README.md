@@ -19,13 +19,17 @@ O template para o site é estruturado e permite que a equipe evolua a documenta�
 O projeto é um site que auxilia na falta de controle emocional. Ele oferece ferramentas que possam auxiliar o usuário, como vivências similares de demais usuários, meditações e músicas que visam uma maior tranquilidade, e psicólogos confiáveis para realizarem consultas.
 
 ## Problema
-Nossa aplicação busca melhorar os problemas da ansiedade, da tristeza e da raiva.
+
+Milhões de pessoas ao redor do mundo estão enfrentando desafios significativos de desequilíbrio emocional, afetando indivíduos de todas as idades e classes sociais. Este fenômeno tem impactos profundos na qualidade de vida, na produtividade no trabalho e na saúde geral dos indivíduos.
+
+A pandemia global exacerbou ainda mais esses problemas, destacando a urgente necessidade de soluções eficazes para ajudar as pessoas a gerenciar suas emoções de forma saudável e sustentável. A busca por abordagens inovadoras e acessíveis tornou-se crucial para mitigar os efeitos adversos desse desequilíbrio emocional generalizado.
 
 ## Objetivos
 
 O objetivo ao desenvolver o software é amenizar os problemas da ansiedade, da tristeza e da raiva, ajudando o usuário a entender e a controlar melhor essas emoções.
 
 ## Justificativa
+
 Atualmente muitas pessoas se sentem ansiosas, principalmente no Brasil, onde o índice de ansiedade é altíssimo. Isso se deve à pandemia, como nos outros países, mas também devido às várias mudanças na economia, o alto índice de desemprego, a falta de segurança pública, dentre outros. Também por causa desses fatores, o Brasil é um dos países com maior índice de depressão e, por isso, amenizar a ansiedade e a depressão é tão importante. As formas do nosso site de tentar amenizá-los também funciona para a raiva, por isso a incluímos em nossos objetivos.
 
 ## Público-Alvo
@@ -79,15 +83,16 @@ Ana Catarina:
 </table>
 
 ## Requisitos
+
 ### Requisitos funcionais:
-- Cadastro de usuário.
 - Seção sobre meditações.
 - Seção de vivências.
 - Acesso a psicólgos próximos.
+
 #### Requisitos não funcionais:
 - Privacidade de informações pessoais.
 - Psicólogos verificados pelo CEPP.
-- Músicas de alta qualidade.
+- Variedade de conteúdos.
 
 ## User Flow
 
@@ -95,25 +100,26 @@ Ana Catarina:
 
 
 ## Wireframes
-![image](../codigo/assets/img/wireframes/Cadastro%20de%20Psicólogo.jpg)<br>
-![image](../codigo/assets/img/wireframes/Cadastro%20de%20Vivências.jpg)<br>
-![image](../codigo/assets/img/wireframes/Conteúdos.jpg)<br>
-![image](../codigo/assets/img/wireframes/Login.jpg)<br>
-![image](../codigo/assets/img/wireframes/Psicologos.png)<br>
-![image](../codigo/assets/img/wireframes/Página%20de%20Informações.jpg)<br>
-![image](../codigo/assets/img/wireframes/Página%20de%20Usuário.jpg)<br>
-![image](../codigo/assets/img/wireframes/Tela%20Inicial-1.jpg)<br>
-![image](../codigo/assets/img/wireframes/Tela%20Inicial.jpg)<br>
-![image](../codigo/assets/img/wireframes/Vivências.jpg)<br>
-
+![image3](https://github.com/ICEI-PUC-Minas-PMGCC-TI/ti-1-pmg-cc-m-20241-g12-falta-de-controle-emocional/assets/165406204/e44641d0-3af6-40e3-b1af-c2ef95426e00)
+![image2](https://github.com/ICEI-PUC-Minas-PMGCC-TI/ti-1-pmg-cc-m-20241-g12-falta-de-controle-emocional/assets/165406204/198a4ad5-94b1-4c78-b4d1-4c3f7a518ec9)
+![image1](https://github.com/ICEI-PUC-Minas-PMGCC-TI/ti-1-pmg-cc-m-20241-g12-falta-de-controle-emocional/assets/165406204/8df4c481-da93-4e2f-986f-6ee20c2b55e9)
 
 ## Gestão de Projetos
-A metodologia utilizada foi o kanban.
+Iniciamos o projeto com entrevistas detalhadas e coleta de dados dos usuários para criar personas. A partir dessas personas, identificamos o público-alvo e concebemos a visão inicial do projeto, definindo suas funcionalidades essenciais.
+
+Para a gestão eficiente do projeto e da equipe, adotamos o aplicativo Trello e a metodologia Kanban para a divisão e acompanhamento das tarefas. Realizávamos reuniões semanais e alinhamentos diários para garantir o progresso contínuo e a sincronização das atividades realizadas.
 
 ### Divisão de Tarefas:
-- Ana Luíza ficou responsável por fazer a documentação do trabalho;
-- Mariana por fazer o wireframe e o design thinking;
-- João por fazer o mapa de empatia, os slides da apresentação e o roteiro do pitch.
+
+#### Organização Inicial
+- Ana Luíza: responável pela documentação;
+- Mariana: responsável pelo wireframe e o design thinking;
+- João: responsável pelo o mapa de empatia, os slides da apresentação e o roteiro do pitch.
+
+#### Organização: Desenvolvimento
+- Ana Luíza: cadastro e amostra de vivências;
+- Mariana: cadastro e amostra de psicólogos;
+- João: cadastro e amostra de conteúdos;
 
 ## Links Importantes
 - Miro: https://miro.com/app/board/uXjVKdBjxi4=/

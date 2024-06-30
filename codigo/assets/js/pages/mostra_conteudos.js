@@ -196,18 +196,21 @@ async function toggleFavorite(event) {
     try {
         const favorites = await getFavorites();
 
-        const user_favorites = favorites.filter(fav => fav.favorito === contentId);
+        if (user) {
+            const user_favorites = favorites.filter(fav => fav.favorito === contentId);
+            const user_favorite = user_favorites.find(fav => fav.usuario == user.id);
 
-        const user_favorite = user_favorites.find(fav => fav.usuario == user.id);
-
-        if (user_favorite) {
-            await Promise.all(user_favorites.map(async fav => {
-                if (fav.usuario == user.id) {
-                    await remove_fav(fav.id);
-                }
-            }));
+            if (user_favorite) {
+                await Promise.all(user_favorites.map(async fav => {
+                    if (fav.usuario == user.id) {
+                        await remove_fav(fav.id);
+                    }
+                }));
+            } else {
+                saveFavorites(contentId);
+            }
         } else {
-            saveFavorites(contentId);
+            message("Você não está logado no sistema! Realize o cadastro.", "error");
         }
     } catch (error) {
         console.error("Erro ao alternar favorito:", error);
