@@ -53,11 +53,13 @@ async function displayContent(data) {
         data.forEach(item => {
             let isFavorited = false;
 
-            favoritos.forEach(favorito => {
-                if (favorito.favorito === item.id && favorito.usuario === user.id) {
-                    isFavorited = true;
-                }
-            });
+            if (user) {
+                favoritos.forEach(favorito => {
+                    if (favorito.favorito === item.id && favorito.usuario === user.id) {
+                        isFavorited = true;
+                    }
+                });
+            }
 
             const card = document.createElement('div');
             card.classList.add('content-card');
