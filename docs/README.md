@@ -70,14 +70,14 @@ Ana Catarina:
       <td>
         Pensar menos no meu futuro e gastar mais tempo com soluções.
       </td>
-      <td>Por meio de ferramentas entratégicas para colocar soluções em prática, como vídeos e fotos de conteúdos para controle mental.</td>
+      <td>Por meio de ferramentas entratégicas para colocar soluções em prática, como conteúdos com vídeos e fotos para controle mental.</td>
     </tr>
     <tr>
       <th scope="row">Lívia</th>
       <td>
         Afetar menos a minha vida pessoal, e estar menos tensa com meu presente.
       </td>
-      <td>Por meio de uma seção de psicólogos mais acessíveis e próximos a mim</td>
+      <td>Por meio de uma seção com psicólogos mais acessíveis e próximos a mim</td>
     </tr>
   </tbody>
 </table>

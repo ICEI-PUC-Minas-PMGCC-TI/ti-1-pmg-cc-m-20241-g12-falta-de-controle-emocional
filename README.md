@@ -17,4 +17,23 @@ O objetivo do site é amenizar os problemas da ansiedade, da tristeza e da raiva
 
 ## Instruções de utilização
 
-Ligue o json server e o live server para poder rodar o site.
+### Pré-requisitos
+
+Antes de começar, certifique-se de ter o [Node.js](https://nodejs.org/) instalado em sua máquina.
+
+### Clonando o Repositório
+
+1. Clone o repositório para a sua máquina local:
+    ```sh
+    git clone https://github.com/ICEI-PUC-Minas-PMGCC-TI/ti-1-pmg-cc-m-20241-g12-falta-de-controle-emocional.git
+    ```
+
+2. Entre na pasta do projeto e navegue até a pasta do código:
+    ```sh
+    cd codigo
+    ```
+
+3. Inicie o JSON Server:
+    ```sh
+    npm start
+    ```
