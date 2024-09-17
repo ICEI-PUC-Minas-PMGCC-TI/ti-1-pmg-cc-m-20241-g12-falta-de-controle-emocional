@@ -47,7 +47,7 @@ async function registerPsicologo(event) {
       if (response.ok) {
          console.log("Psicólogo cadastrado com sucesso:", data);
          message("Psicólogo cadastrado com sucesso", "success");
-         window.location.replace("./modules/perfil/mostra_perfil.html");
+         window.location.replace("/modules/perfil/mostra_perfil.html");
       } else {
          console.error("Erro ao cadastrar psicólogo:", response.statusText);
          message("Erro ao cadastrar psicólogo", "error");

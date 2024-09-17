@@ -6,8 +6,8 @@ Utilização dos Componentes:
             <nav links-list class="navbar"></nav>
 
         Importar os links:   
-        - CSS: <link rel="stylesheet" href="./assets/css/components/navbar.css" />
-        - JS: <script src="./components/navbar.js"></script>
+        - CSS: <link rel="stylesheet" href="/assets/css/components/navbar.css" />
+        - JS: <script src="/components/navbar.js"></script>
     
     Footer:
 
@@ -15,5 +15,5 @@ Utilização dos Componentes:
             <footer class="footer" profiles__list></footer>
 
         Importar os links:   
-        - CSS: <link rel="stylesheet" href="./assets/css/components/footer.css" />
-        - JS: <script src="./components/footer.js"></script>
+        - CSS: <link rel="stylesheet" href="/assets/css/components/footer.css" />
+        - JS: <script src="/components/footer.js"></script>
