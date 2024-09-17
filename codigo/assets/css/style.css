@@ -1,99 +1,99 @@
 @font-face {
-   font-family: "Raleway";
-   src: url("/assets/fonts/Ralewey.ttf") format("truetype");
+  font-family: "Raleway";
+  src: url("./assets/fonts/Ralewey.ttf") format("truetype");
 }
 
 * {
-   margin: 0%;
-   padding: 0%;
-   font-family: "Raleway";
-   color: #242424 !important;
+  margin: 0%;
+  padding: 0%;
+  font-family: "Raleway";
+  color: #242424 !important;
 }
 
 @media (max-width: 730px) {
-   .section {
-      padding: 0rem 1rem;
-   }
+  .section {
+    padding: 0rem 1rem;
+  }
 
-   .message {
-      margin: 0rem 1rem;
-   }
+  .message {
+    margin: 0rem 1rem;
+  }
 }
 
 @media (min-width: 730px) {
-   .message {
-      margin: 0rem 6rem;
-   }
+  .message {
+    margin: 0rem 6rem;
+  }
 }
 
 a {
-   text-decoration: none !important;
+  text-decoration: none !important;
 }
 
 section {
-   padding: 0rem 6rem;
-   min-height: 10rem;
-   margin: 2rem 0rem;
+  padding: 0rem 6rem;
+  min-height: 10rem;
+  margin: 2rem 0rem;
 }
 
 button {
-   background-color: transparent;
-   border: none;
+  background-color: transparent;
+  border: none;
 }
 
 .btn_primary {
-   background-color: #22478e;
-   color: #fff !important;
-   border-radius: 0.25rem;
-   border: none;
-   padding: 0.25rem 1rem;
-   font-weight: 600;
+  background-color: #22478e;
+  color: #fff !important;
+  border-radius: 0.25rem;
+  border: none;
+  padding: 0.25rem 1rem;
+  font-weight: 600;
 }
 
 .btn_primary:hover {
-   background: #0a1e42;
+  background: #0a1e42;
 }
 
 .btn_outline {
-   background-color: transparent;
-   border: #1e1e1e 1px solid;
-   color: #1e1e1e !important;
-   border-radius: 2px;
-   padding: 0.125rem 0.25rem;
-   font-size: 12px;
-   font-weight: 700;
+  background-color: transparent;
+  border: #1e1e1e 1px solid;
+  color: #1e1e1e !important;
+  border-radius: 2px;
+  padding: 0.125rem 0.25rem;
+  font-size: 12px;
+  font-weight: 700;
 }
 
 .message {
-   width: auto;
-   height: 6rem;
-   padding: 1rem 0rem 0rem 0.25rem;
+  width: auto;
+  height: 6rem;
+  padding: 1rem 0rem 0rem 0.25rem;
 }
 
 .error {
-   display: flex;
-   align-items: center;
-   width: 100%;
-   height: 100%;
-   padding: 0rem 1rem;
-   background-color: rgb(255 242 242);
-   color: rgb(185 28 28) !important;
-   border: rgb(248 113 113) solid 1px !important;
-   border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 0rem 1rem;
+  background-color: rgb(255 242 242);
+  color: rgb(185 28 28) !important;
+  border: rgb(248 113 113) solid 1px !important;
+  border-radius: 0.5rem;
 }
 
 .success {
-   display: flex;
-   align-items: center;
-   width: 100%;
-   height: 100%;
-   padding: 0rem 1rem;
-   background-color: rgb(227, 250, 235);
-   color: #15803d !important;
-   border: #15803d solid 1px !important;
-   border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 0rem 1rem;
+  background-color: rgb(227, 250, 235);
+  color: #15803d !important;
+  border: #15803d solid 1px !important;
+  border-radius: 0.5rem;
 }
 
 .none {
-   display: none !important;
+  display: none !important;
 }

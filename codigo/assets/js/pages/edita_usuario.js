@@ -41,7 +41,7 @@ async function edita_usuario(event) {
         if (response.ok) {
             console.log("Psicólogo editado com sucesso:", data);
             message("Psicólogo editado com sucesso", "success");
-            window.location.replace("/modules/perfil/mostra_perfil.html");
+            window.location.replace("./modules/perfil/mostra_perfil.html");
         } else {
             console.error("Erro ao editar usuario:", response.statusText);
             DelayNode(500)

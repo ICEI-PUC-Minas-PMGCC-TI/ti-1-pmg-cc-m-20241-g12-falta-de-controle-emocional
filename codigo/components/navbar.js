@@ -37,15 +37,15 @@ const links = [
    },
    {
       name: "Vivências",
-      link: "/modules/vivencias/mostra_vivencias.html",
+      link: "./modules/vivencias/mostra_vivencias.html",
    },
    {
       name: "Conteúdo",
-      link: "/modules/conteudos/mostra_conteudos.html",
+      link: "./modules/conteudos/mostra_conteudos.html",
    },
    {
       name: "Psicólogos",
-      link: "/modules/psicologos/mostra_psicologos.html",
+      link: "./modules/psicologos/mostra_psicologos.html",
    }
 ];
 
@@ -64,14 +64,14 @@ const listLinks = (links) => {
 function auth(token) {
    if (token) {
       return `
-         <a class="item" href="/modules/perfil/mostra_perfil.html"><p class="item--style">Perfil</p></a>
+         <a class="item" href="./modules/perfil/mostra_perfil.html"><p class="item--style">Perfil</p></a>
          <li><button id="btn_logout" class="item">Logout</button></li>
         `;
    }
 
    return `
-        <a class="item" href="/modules/login/entrar.html"><p class="item--style">Entrar</p></a>
-        <a class="item" href="/modules/login/cadastro.html"><p class="item--style">Cadastrar</p></a>
+        <a class="item" href="./modules/login/entrar.html"><p class="item--style">Entrar</p></a>
+        <a class="item" href="./modules/login/cadastro.html"><p class="item--style">Cadastrar</p></a>
     `;
 }
 

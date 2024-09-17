@@ -75,7 +75,7 @@ async function fetchData(url) {
 
 function set_psi_edit(psicologo) {
    const id = psicologo.id;
-   const URL_PSI__id = "/modules/psicologos/edita_psicologos.html" + "?id=" + id;
+   const URL_PSI__id = "./modules/psicologos/edita_psicologos.html" + "?id=" + id;
 
    btnPsi_edit.setAttribute("href", URL_PSI__id);
    btnPsi_editdesk.setAttribute("href", URL_PSI__id);

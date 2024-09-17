@@ -71,7 +71,7 @@ async function edita_psicologo(event) {
       if (response.ok) {
          console.log("Psicólogo editado com sucesso:", data);
          message("Psicólogo editado com sucesso", "success");
-         window.location.replace("/modules/perfil/mostra_perfil.html");
+         window.location.replace("./modules/perfil/mostra_perfil.html");
       } else {
          console.error("Erro ao editar psicólogo:", response.statusText);
          message("Erro ao editar psicólogo", "error");

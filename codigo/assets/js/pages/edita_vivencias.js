@@ -51,7 +51,7 @@ async function edita_vivencia(event) {
         const response = await fetch(request);
         if (response.ok) {
             message("Vivência editada com sucesso", "success");
-            window.location.replace("/modules/perfil/mostra_perfil.html");
+            window.location.replace("./modules/perfil/mostra_perfil.html");
         } else {
             console.error("Erro ao editar vivência:", response.statusText);
             message("Erro ao editar vivência", "error");
